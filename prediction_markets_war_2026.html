@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Finance Became Gambling — The 2024–2026 Prediction Markets War</title>
+<meta name="description" content="The definitive intelligence report on how prediction markets collapsed the boundary between Wall Street and Las Vegas — and what happens next. Built from 363 primary source articles.">
+<meta property="og:title" content="When Finance Became Gambling — The 2024–2026 Prediction Markets War">
+<meta property="og:description" content="Trump Media. CME Group. Kalshi. The NBA scandal. India's $3.6B industry destroyed overnight. The complete intelligence picture.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #faf8f4;
+  --paper2: #f2ede4;
+  --ink: #0f0d0a;
+  --ink2: #2a2520;
+  --muted: #7a6e62;
+  --rule: #d8cfc0;
+  --red: #9b1c1c;
+  --red-bg: #fdf2f2;
+  --amber: #92610a;
+  --amber-bg: #fffbf0;
+  --green: #1a5c35;
+  --green-bg: #f0faf4;
+  --blue: #1a3a6b;
+  --blue-bg: #f0f4fa;
+  --gold: #b8860b;
+  --black: #000000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* NEWSPAPER HEADER */
+.newspaper-header {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  padding: 48px 60px 40px;
+  position: relative;
+}
+.pub-line {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.pub-line::before, .pub-line::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+.newspaper-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--paper);
+  max-width: 900px;
+  margin: 0 auto 20px;
+  letter-spacing: -0.02em;
+}
+.newspaper-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+.newspaper-deck {
+  font-size: 17px;
+  color: #c8b8a0;
+  max-width: 680px;
+  margin: 0 auto 32px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.header-stats {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-top: 1px solid #3a3028;
+  border-bottom: 1px solid #3a3028;
+  padding: 16px 0;
+  flex-wrap: wrap;
+}
+.hstat {
+  padding: 0 28px;
+  border-right: 1px solid #3a3028;
+  text-align: center;
+}
+.hstat:last-child { border-right: none; }
+.hstat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: 3px;
+}
+.hstat-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #7a6858;
+  font-weight: 600;
+}
+
+/* LAYOUT */
+.page { max-width: 1060px; margin: 0 auto; padding: 60px 60px; }
+
+/* SECTION RULE */
+.sec-rule {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.sec-num {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  font-family: 'Source Sans 3', sans-serif;
+}
+.sec-line { flex: 1; height: 1px; background: var(--rule); }
+.sec-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.sec-sub { color: var(--muted); font-size: 13px; margin-bottom: 32px; }
+
+/* OPENING DISPATCH */
+.dispatch {
+  border: 2px solid var(--ink);
+  padding: 36px 40px;
+  margin-bottom: 48px;
+  position: relative;
+}
+.dispatch-label {
+  position: absolute;
+  top: -11px;
+  left: 32px;
+  background: var(--paper);
+  padding: 0 12px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.dispatch p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--ink2);
+  margin-bottom: 14px;
+}
+.dispatch p:last-child { margin-bottom: 0; }
+.dispatch strong { color: var(--ink); font-weight: 700; }
+
+/* BREAKING CARDS */
+.breaking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-bottom: 48px;
+}
+.breaking-card {
+  background: var(--paper);
+  padding: 28px 28px;
+}
+.breaking-card.full-width {
+  grid-column: 1 / -1;
+}
+.bc-category {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bc-category::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+.bc-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+.bc-body {
+  font-size: 13.5px;
+  color: var(--ink2);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.bc-verdict {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-left: 3px solid;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+.ev-list {
+  list-style: none;
+  margin-top: 10px;
+  border-top: 1px solid var(--rule);
+  padding-top: 10px;
+}
+.ev-list li {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 3px 0 3px 14px;
+  position: relative;
+  line-height: 1.5;
+}
+.ev-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 10px;
+}
+
+/* TIMELINE */
+.timeline { margin-bottom: 48px; }
+.tl-item {
+  display: grid;
+  grid-template-columns: 140px 24px 1fr;
+  gap: 0 16px;
+  margin-bottom: 0;
+}
+.tl-date {
+  text-align: right;
+  padding-top: 3px;
+  padding-bottom: 20px;
+}
+.tl-date-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  font-family: 'Source Sans 3', sans-serif;
+  letter-spacing: 0.04em;
+  display: block;
+}
+.tl-date-period {
+  font-size: 10px;
+  color: #aaa098;
+  display: block;
+  margin-top: 2px;
+}
+.tl-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tl-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+.tl-line {
+  flex: 1;
+  width: 2px;
+  background: var(--rule);
+  margin-top: 3px;
+}
+.tl-body { padding-bottom: 24px; }
+.tl-head {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.tl-text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.tl-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-family: 'Source Sans 3', sans-serif;
+}
+.badge-win { background: var(--green-bg); color: var(--green); }
+.badge-loss { background: var(--red-bg); color: var(--red); }
+.badge-pending { background: var(--amber-bg); color: var(--amber); }
+.badge-major { background: var(--ink); color: var(--gold); }
+
+/* PULLQUOTE */
+.pullquote {
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding: 24px 0;
+  margin: 32px 0;
+}
+.pullquote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.pullquote cite {
+  font-size: 11px;
+  font-style: normal;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 10px;
+}
+
+/* COMPARISON TABLE */
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0 48px;
+  font-size: 13px;
+}
+.comp-table th {
+  background: var(--ink);
+  color: var(--gold);
+  padding: 11px 14px;
+  text-align: left;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-family: 'Source Sans 3', sans-serif;
+}
+.comp-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink2);
+  vertical-align: top;
+}
+.comp-table tr:hover td { background: var(--paper2); }
+.comp-table .name-cell {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 14px;
+}
+.status-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'Source Sans 3', sans-serif;
+  letter-spacing: 0.04em;
+}
+.s-active { background: var(--green-bg); color: var(--green); }
+.s-legal { background: var(--red-bg); color: var(--red); }
+.s-entering { background: var(--blue-bg); color: var(--blue); }
+.s-pending { background: var(--amber-bg); color: var(--amber); }
+
+/* MARKET IMPACT CARDS */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.impact-card {
+  border: 1px solid var(--rule);
+  padding: 22px;
+}
+.impact-flag { font-size: 1.8rem; margin-bottom: 8px; display: block; }
+.impact-market {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.impact-headline {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.impact-body { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.impact-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 10px;
+  line-height: 1;
+}
+
+/* CONCLUSION */
+.conclusion {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 52px;
+  margin-top: 48px;
+}
+.conclusion h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.conclusion p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #c0b0a0;
+  margin-bottom: 16px;
+  max-width: 800px;
+}
+.conclusion p strong { color: var(--paper); }
+.verdict-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+  padding-top: 32px;
+  border-top: 1px solid #3a3028;
+}
+.verdict-item {}
+.verdict-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-family: 'Source Sans 3', sans-serif;
+}
+.verdict-text { font-size: 13px; color: #b0a090; line-height: 1.6; }
+
+/* FOOTER */
+footer {
+  background: var(--paper2);
+  border-top: 3px solid var(--ink);
+  padding: 32px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.footer-right { font-size: 11px; color: var(--muted); text-align: right; line-height: 1.7; }
+.footer-disc {
+  width: 100%;
+  font-size: 10px;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .page { padding: 32px 24px; }
+  .newspaper-header { padding: 36px 24px; }
+  .newspaper-title { font-size: 2.4rem; }
+  .breaking-grid { grid-template-columns: 1fr; }
+  .impact-grid { grid-template-columns: 1fr; }
+  .verdict-grid { grid-template-columns: 1fr; }
+  footer { padding: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NEWSPAPER HEADER -->
+<div class="newspaper-header">
+  <div class="pub-line">Gaming Intelligence Hub · Las Vegas · Special Report · 2026</div>
+  <h1 class="newspaper-title">When Finance<br>Became <em>Gambling</em></h1>
+  <p class="newspaper-deck">The 2024–2026 Prediction Markets War — how Trump Media, CME Group, and Wall Street crashed into Las Vegas, why the NBA is in crisis, and what happens when the world's most powerful financial institutions decide they want a piece of sports wagering.</p>
+  <div class="header-stats">
+    <div class="hstat"><span class="hstat-num">363</span><span class="hstat-label">Articles Analyzed</span></div>
+    <div class="hstat"><span class="hstat-num">2</span><span class="hstat-label">Years of Data</span></div>
+    <div class="hstat"><span class="hstat-num">$2B+</span><span class="hstat-label">Weekly Prediction Volume</span></div>
+    <div class="hstat"><span class="hstat-num">36</span><span class="hstat-label">State AGs Opposing</span></div>
+    <div class="hstat"><span class="hstat-num">95%</span><span class="hstat-label">Dream11 Revenue Lost</span></div>
+    <div class="hstat"><span class="hstat-num">34</span><span class="hstat-label">People Charged — NBA</span></div>
+  </div>
+</div>
+
+<!-- OPENING DISPATCH -->
+<div class="page" style="padding-bottom:0">
+  <div class="sec-rule"><span class="sec-num">Opening Dispatch</span><div class="sec-line"></div></div>
+</div>
+<div class="page" style="padding-top:0">
+  <div class="dispatch">
+    <div class="dispatch-label">Intelligence Summary</div>
+    <p>Something fundamental broke in 2024–2026. The boundary between a financial instrument and a gambling wager — carefully maintained by regulators, courts, and industry for decades — collapsed under the weight of prediction markets, political pressure, and the world's most powerful financial institutions deciding they wanted in.</p>
+    <p><strong>Trump Media launched Truth Predict.</strong> CME Group — the world's largest derivatives exchange — announced plans to build sports-linked financial contracts to compete directly with Kalshi and Polymarket. Robinhood doubled its revenue on prediction market volume. The NBA arrested a head coach and a starting guard in a sweeping FBI investigation spanning 11 states and 34 defendants. Nevada's Gaming Control Board issued Notice 2025-77 declaring all of these products to be gambling under state law.</p>
+    <p>And while the most consequential legal battle in US gaming history was unfolding, India destroyed a $3.6 billion industry overnight. Dream11's CEO watched 95% of his company's revenue disappear in 24 hours after Parliament passed the Promotion and Regulation of Online Gaming Bill 2025. Sri Lanka announced it would have a fully operational gaming regulator by June 2026. The global picture has never been more volatile — or more important to understand.</p>
+    <p><strong>This is the complete intelligence picture. Built from 363 primary source articles. 2024 to 2026.</strong></p>
+  </div>
+
+  <!-- THE 7 BREAKING DEVELOPMENTS -->
+  <div class="sec-rule"><span class="sec-num">Section 01</span><div class="sec-line"></div></div>
+  <div class="sec-title">Seven Developments That Changed Everything</div>
+  <p class="sec-sub">The stories that broke the boundary between finance and gambling — analyzed with primary source intelligence.</p>
+
+  <div class="breaking-grid">
+
+    <!-- TRUMP MEDIA -->
+    <div class="breaking-card">
+      <div class="bc-category" style="color:#9b1c1c">🇺🇸 USA — Political</div>
+      <div class="bc-headline">Trump Media Launches Truth Predict — The Most Politically Charged Prediction Market in History</div>
+      <div class="bc-body">Donald Trump's media company, TMTG, announced Truth Predict — a prediction market feature on Truth Social allowing users to wager on elections, inflation rates, and sports outcomes. The platform uses Crypto.com Derivatives North America (CDNA) to facilitate contracts, deepening Trump Media's crypto ties. CEO Devin Nunes framed it as "democratizing information" and "empowering everyday Americans."</div>
+      <div class="bc-body">Weekly prediction market volume had already surpassed $2 billion when the announcement landed. The entry of a politically connected media empire into prediction markets changes the regulatory calculus entirely — any federal enforcement action now carries political dimensions it previously did not.</div>
+      <div class="bc-verdict" style="border-color:#9b1c1c;background:#fdf2f2;color:#9b1c1c">
+        Intelligence Verdict: Truth Predict makes federal regulation of prediction markets a political act. Any administration move against Kalshi or Polymarket now risks being characterized as targeting political speech. This is the most significant regulatory complication the sector has ever faced.
+      </div>
+    </div>
+
+    <!-- CME GROUP -->
+    <div class="breaking-card">
+      <div class="bc-category" style="color:#1a3a6b">🏛 USA — Financial Markets</div>
+      <div class="bc-headline">CME Group Enters the Arena — Wall Street's Largest Exchange Prepares to Compete with Kalshi</div>
+      <div class="bc-body">The Chicago-based CME Group — the world's largest derivatives exchange — announced plans to launch financial contracts linked to sports events before year-end, distributed through futures commission merchants including a new vehicle being developed with FanDuel. DraftKings shares dropped 3.8% on the news before recovering.</div>
+      <div class="bc-body">CME's existing CFTC license permits self-certification of new contracts without explicit federal approval — a structural advantage neither Kalshi nor Polymarket possesses. CME CEO Terry Duffy had stated the exchange was "operationally ready" for sports products months before the announcement.</div>
+      <div class="bc-verdict" style="border-color:#1a3a6b;background:#f0f4fa;color:#1a3a6b">
+        Intelligence Verdict: When the world's largest derivatives exchange enters your market, the regulatory conversation changes permanently. CME's CFTC standing gives prediction markets institutional legitimacy they could not purchase. This is the most significant validation event in prediction market history.
+      </div>
+    </div>
+
+    <!-- KALSHI SUES NEW YORK -->
+    <div class="breaking-card">
+      <div class="bc-category" style="color:#92610a">⚖️ USA — Legal Battle</div>
+      <div class="bc-headline">Kalshi Sues New York — The CFTC vs. States War Goes to Federal Court</div>
+      <div class="bc-body">Kalshi filed a federal lawsuit against the New York State Gaming Commission, challenging what it described as an unlawful state-level crackdown on its sports-related trading products. The case — with Milbank LLP as counsel — centers on CFTC preemption, arguing sports event contracts are federal financial instruments, not state gambling products.</div>
+      <div class="bc-body">The filing mirrors earlier tensions with New Jersey regulators. Industry observers noted the outcome will have direct implications for Robinhood, which faces identical questions about where trading ends and gambling begins. The CFTC vs. state sovereignty battle has officially moved from regulatory memos to federal court filings.</div>
+      <div class="bc-verdict" style="border-color:#92610a;background:#fffbf0;color:#92610a">
+        Intelligence Verdict: Federal court is where this battle gets decided. Kalshi's legal strategy is aggressive and correct — state gambling commissions cannot regulate federally chartered derivatives. But 36 AGs disagree. The ruling will define the sector's regulatory structure for a generation.
+      </div>
+    </div>
+
+    <!-- NEVADA NGCB NOTICE -->
+    <div class="breaking-card">
+      <div class="bc-category" style="color:#1a5c35">🎰 Nevada — Regulatory</div>
+      <div class="bc-headline">Nevada NGCB Issues Notice 2025-77 — Sports Event Contracts Are Gambling Under State Law</div>
+      <div class="bc-body">The Nevada Gaming Control Board issued Notice No. 2025-77, formally classifying sports event contracts — including those listed on CFTC-regulated exchanges — as wagers under Nevada law. NGCB Chair Mike Dreitzer stated that any contract based on sports or similar contest results requires a full sports pool license to operate in Nevada.</div>
+      <div class="bc-body">The notice specifically warned licensees: associating with firms offering event contracts elsewhere without proper authorization could trigger disciplinary action and call into question the licensee's "good character and integrity" under the Gaming Control Act. Examples cited include WSOP, Oscars, esports, and political elections.</div>
+      <ul class="ev-list">
+        <li>Applies even to CFTC-regulated exchange-listed contracts</li>
+        <li>Requires non-restricted gaming license with sports-pool approval</li>
+        <li>Licensees partnering with unlicensed firms face disciplinary action</li>
+        <li>Good character and integrity standards apply to associations — not just direct operations</li>
+      </ul>
+      <div class="bc-verdict" style="border-color:#1a5c35;background:#f0faf4;color:#1a5c35">
+        Intelligence Verdict: This is the most operationally significant ruling for gaming technology companies in Nevada. Any Konami Gaming, IGT, or Aristocrat licensee that partners with prediction market operators now faces direct NGCB scrutiny. Compliance teams across the Strip need to read Notice 2025-77 immediately.
+      </div>
+    </div>
+
+    <!-- NBA SCANDAL -->
+    <div class="breaking-card full-width">
+      <div class="bc-category" style="color:#9b1c1c">🏀 USA — Sports Integrity Crisis</div>
+      <div class="bc-headline">The NBA's Worst Gambling Crisis — Coach and Player Arrested, 34 Charged, FBI Calls It "The Insider Trading Saga for the NBA"</div>
+      <div class="bc-body">The NBA was thrown into crisis when Portland Trail Blazers head coach Chauncey Billups and Miami Heat guard Terry Rozier were arrested in two overlapping federal investigations. The FBI probe spanned 11 states, charged 34 people, and involved tens of millions of dollars in illegal sports betting and Mafia-backed underground poker operations.</div>
+      <div class="bc-body">Rozier was accused of sharing insider information to aid bets on at least seven NBA games between 2023 and 2024 — including informing associates before a March 2023 game that he would remove himself early with an injury, enabling winning bets on his statistical "unders." Billups was charged separately for allegedly organizing rigged underground poker games linked to four Mafia families, where cheating technology including marked cards and hidden cameras defrauded victims of millions.</div>
+      <div class="bc-body">FBI Director Kash Patel called it "the insider trading saga for the NBA." Both Billups and Rozier face wire fraud and money-laundering conspiracy charges carrying up to 20 years in prison each.</div>
+      <ul class="ev-list">
+        <li>34 people charged — FBI investigation across 11 states</li>
+        <li>Rozier: insider information on 7+ NBA games 2023–2024</li>
+        <li>Billups: Mafia-linked underground poker, cheating technology</li>
+        <li>Both face up to 20 years — wire fraud and money-laundering conspiracy</li>
+        <li>NBA placed both on immediate leave</li>
+      </ul>
+      <div class="bc-verdict" style="border-color:#9b1c1c;background:#fdf2f2;color:#9b1c1c">
+        Intelligence Verdict: This is the integrity crisis the gaming industry has feared since PASPA was repealed in 2018. A head coach and starting guard simultaneously implicated in separate federal investigations signals that insider gambling has reached organizational levels. Every US sportsbook and data provider now faces intensified regulatory scrutiny on integrity monitoring systems. The era of voluntary integrity measures is over.
+      </div>
+    </div>
+
+    <!-- INDIA COLLAPSE -->
+    <div class="breaking-card">
+      <div class="bc-category" style="color:#9b1c1c">🇮🇳 India — Market Destruction</div>
+      <div class="bc-headline">India Bans Real Money Gaming — Dream11 Loses 95% of Revenue Overnight</div>
+      <div class="bc-body">India's Parliament passed the Promotion and Regulation of Online Gaming Bill 2025, banning real money gaming and imposing penalties of up to three years imprisonment for violations. Dream11 CEO Harsh Jain stated that 95% of the company's revenues and 100% of its profits disappeared overnight. The company informed BCCI it cannot continue as title sponsor of the Indian cricket team — a $44 million contract covering 2023–2026.</div>
+      <div class="bc-body">The bill defines an online money game as any game where users deposit money in expectation of monetary rewards, warning that such games "use manipulative design features, addictive algorithms promoting compulsive behaviour." Social gaming and subscription models are permitted. India's real-money gaming sector was valued at $3.6 billion and projected to reach that figure by 2029 via venture capital firm Lumikai.</div>
+      <div class="bc-verdict" style="border-color:#9b1c1c;background:#fdf2f2;color:#9b1c1c">
+        Intelligence Verdict: The fastest destruction of a major gaming market on record. $3.6 billion. Gone. In 24 hours. No operator, no B2B supplier, no investor should enter any market without a contingency plan for sudden legislative reversal. India was the cautionary tale nobody wanted to write.
+      </div>
+    </div>
+
+    <!-- SRI LANKA -->
+    <div class="breaking-card">
+      <div class="bc-category" style="color:#1a3a6b">🇱🇰 Sri Lanka — Emerging Market</div>
+      <div class="bc-headline">Sri Lanka Establishes Gambling Regulatory Authority — FATF Compliance Drives New Market Creation</div>
+      <div class="bc-body">Sri Lanka's Gambling Regulatory Authority (GRA) is expected to be fully operational by June 2026, following Committee on Public Finance recommendations. The authority is being built to FATF anti-money-laundering standards, with a seven-member board including Treasury, Inland Revenue, Financial Intelligence Unit, and Police representatives.</div>
+      <div class="bc-body">Officials estimate 60–70% of Sri Lankan gaming activity occurs on foreign websites — a legal vacuum described as posing "both financial and social risks." Singapore's regulatory model has been cited as the benchmark. International consultancy support is being sought. The legislation is already in place — regulations are the final step.</div>
+      <div class="bc-verdict" style="border-color:#1a3a6b;background:#f0f4fa;color:#1a3a6b">
+        Intelligence Verdict: Sri Lanka follows the global pattern — FATF pressure is the primary driver of new gaming regulatory frameworks in developing markets. When a country moves 60–70% of its gaming from grey to regulated, it creates a first-mover opportunity for compliant operators. Watch this market in Q3–Q4 2026.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PREDICTION MARKETS PLAYER TABLE -->
+<div class="page">
+  <div class="sec-rule"><span class="sec-num">Section 02</span><div class="sec-line"></div></div>
+  <div class="sec-title">The Players — Who Is Fighting This War and How</div>
+  <p class="sec-sub">Every major participant in the prediction markets legal and commercial battle — their position, strategy, and current status.</p>
+
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Type</th>
+        <th>Strategy</th>
+        <th>Legal Status</th>
+        <th>Key Development</th>
+        <th>Threat Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="name-cell">Kalshi</td>
+        <td>Prediction Market</td>
+        <td>CFTC preemption — sue every state that challenges</td>
+        <td><span class="status-pill s-active">Operating</span></td>
+        <td>Sued New York Gaming Commission · $2B valuation · $185M raised</td>
+        <td style="color:#9b1c1c;font-weight:700">Critical Legal Risk</td>
+      </tr>
+      <tr>
+        <td class="name-cell">Polymarket</td>
+        <td>Prediction Market</td>
+        <td>Sports partnerships + media deals for legitimacy</td>
+        <td><span class="status-pill s-legal">Suing MA</span></td>
+        <td>NY Rangers partner · MLB agreement · Venezuela payout dispute</td>
+        <td style="color:#92610a;font-weight:700">Elevated Legal Risk</td>
+      </tr>
+      <tr>
+        <td class="name-cell">CME Group</td>
+        <td>Financial Exchange</td>
+        <td>CFTC license self-certification — no state approval needed</td>
+        <td><span class="status-pill s-entering">Entering</span></td>
+        <td>FanDuel partnership · Sports contracts before year-end · $DraftKings -3.8%</td>
+        <td style="color:#1a5c35;font-weight:700">Low — Highest Legitimacy</td>
+      </tr>
+      <tr>
+        <td class="name-cell">Trump Media / Truth Predict</td>
+        <td>Media / Political</td>
+        <td>Political protection through association with administration</td>
+        <td><span class="status-pill s-entering">Launching</span></td>
+        <td>Uses Crypto.com CDNA · Elections + sports + economics · Global rollout planned</td>
+        <td style="color:#1a3a6b;font-weight:700">Political Wildcard</td>
+      </tr>
+      <tr>
+        <td class="name-cell">DraftKings</td>
+        <td>Sportsbook / DFS</td>
+        <td>Enter prediction markets while protecting state licenses</td>
+        <td><span class="status-pill s-active">Operating</span></td>
+        <td>Player-specific event contracts · Warned by state regulators · DK shares fell on CME news</td>
+        <td style="color:#92610a;font-weight:700">Dual License Risk</td>
+      </tr>
+      <tr>
+        <td class="name-cell">Robinhood</td>
+        <td>Financial Platform</td>
+        <td>Prediction markets as financial products — not gambling</td>
+        <td><span class="status-pill s-active">Operating</span></td>
+        <td>Record $1.27B Q3 revenue driven by prediction + crypto volume</td>
+        <td style="color:#92610a;font-weight:700">Regulatory Scrutiny</td>
+      </tr>
+      <tr>
+        <td class="name-cell">36 State AGs</td>
+        <td>Regulatory Opposition</td>
+        <td>Bipartisan amicus brief — state sovereignty over gambling</td>
+        <td><span class="status-pill s-pending">Active Challenge</span></td>
+        <td>Federal case amicus brief · Nevada NGCB Notice 2025-77 · Hawaii state ban bill</td>
+        <td style="color:#9b1c1c;font-weight:700">Existential Threat</td>
+      </tr>
+      <tr>
+        <td class="name-cell">Nevada NGCB</td>
+        <td>State Regulator</td>
+        <td>Notice 2025-77 — classify all event contracts as wagers</td>
+        <td><span class="status-pill s-active">Enforcing</span></td>
+        <td>Sports pool license required · Licensee association risk · Offshore gambling warning</td>
+        <td style="color:#9b1c1c;font-weight:700">Immediate Action Risk</td>
+      </tr>
+      <tr>
+        <td class="name-cell">PrizePicks / Underdog</td>
+        <td>DFS → Prediction</td>
+        <td>NFA FCM registration as bridge from DFS to prediction markets</td>
+        <td><span class="status-pill s-active">Operating</span></td>
+        <td>PrizePicks NFA approved · Underdog self-listed exchange · $2.5B Allwyn acquisition</td>
+        <td style="color:#92610a;font-weight:700">Moderate Legal Risk</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- TIMELINE -->
+  <div class="sec-rule"><span class="sec-num">Section 03</span><div class="sec-line"></div></div>
+  <div class="sec-title">The Complete 2024–2026 Timeline</div>
+  <p class="sec-sub">Every significant development in chronological order. The definitive reference document for the prediction markets legal battle.</p>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">2023–2024</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#b8860b"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">Kalshi launches sports event contracts under CFTC framework</div>
+        <div class="tl-text">Event contracts classified as commodity futures under the CEA. CFTC oversight claimed as sufficient. State gambling laws argued preempted. The opening move in the most consequential legal battle in US gaming history.</div>
+        <span class="tl-badge badge-pending">Opening Move</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">Early 2025</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#9b1c1c"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">NCAA demands CFTC halt college basketball contracts</div>
+        <div class="tl-text">NCAA files formal objection demanding halt to March Madness event contracts. CFTC does not act. Kalshi continues operating and hits record college basketball trading volumes.</div>
+        <span class="tl-badge badge-win">Kalshi Won — NCAA Lost</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">Feb 2025</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#b8860b"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">$1 Billion Super Bowl — Kalshi hits single-day record</div>
+        <div class="tl-text">Super Bowl trading volume crosses $1B in a single day. Prediction markets cross from niche financial product to mainstream event. Venture capital begins deploying at scale.</div>
+        <span class="tl-badge badge-major">Market Milestone</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">Feb 2025</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#b8860b"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">Kalshi raises $185M at $2B valuation</div>
+        <div class="tl-text">Major institutional funding round. Venture capital bets on CFTC preemption prevailing. Weekly prediction market volume across all platforms surpasses $2 billion.</div>
+        <span class="tl-badge badge-win">Industry Validated</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">Mar 2025</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#9b1c1c"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">36 State AGs file bipartisan amicus brief against Kalshi</div>
+        <div class="tl-text">Largest bipartisan coalition in US gaming legal history. AGs argue CFTC regulation cannot preempt state gambling authority. The existential legal challenge to the entire sector is formally filed.</div>
+        <span class="tl-badge badge-loss">Existential Threat</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">Mar 2025</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#1a5c35"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">Federal judge rejects tribal bid to block Kalshi's contracts</div>
+        <div class="tl-text">California federal court rules Kalshi's event contracts are not gambling under tribal compacts. First major judicial precedent favoring CFTC framework. Tribes face structural competitive threat.</div>
+        <span class="tl-badge badge-win">Kalshi Won</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">2025</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#9b1c1c"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">NBA gambling scandal — Billups and Rozier arrested. 34 charged.</div>
+        <div class="tl-text">FBI investigation across 11 states. Head coach and starting guard arrested simultaneously in overlapping federal investigations. FBI Director calls it "the insider trading saga for the NBA." Mafia-linked underground poker. Wire fraud. Money laundering. Up to 20 years each.</div>
+        <span class="tl-badge badge-loss">Integrity Crisis</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">2025</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#9b1c1c"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">Nevada NGCB issues Notice 2025-77 — event contracts are wagers</div>
+        <div class="tl-text">NGCB Chair Mike Dreitzer formalizes Nevada's position: sports event contracts require sports pool license regardless of CFTC registration. Licensee association risk created. The most operationally significant ruling for Nevada gaming technology companies.</div>
+        <span class="tl-badge badge-loss">Regulatory Barrier</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">2025</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#9b1c1c"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">India passes real money gaming ban — Dream11 loses 95% of revenue</div>
+        <div class="tl-text">The fastest destruction of a major gaming market on record. $3.6B sector. Gone in 24 hours. Dream11 exits BCCI title sponsorship. 100% of profits eliminated. The definitive case study in legislative risk.</div>
+        <span class="tl-badge badge-loss">Market Destroyed</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">2025–2026</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#b8860b"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">Trump Media launches Truth Predict — politics enters prediction markets</div>
+        <div class="tl-text">TMTG announces Truth Predict via Crypto.com CDNA. Elections, inflation, sports outcomes. Global rollout planned. Federal regulation of prediction markets now carries political dimensions. Enforcement against competitors risks being characterized as censorship.</div>
+        <span class="tl-badge badge-major">Political Wildcard</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">2026</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#1a5c35"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">CME Group announces FanDuel partnership for sports-linked contracts</div>
+        <div class="tl-text">World's largest derivatives exchange enters prediction markets. Self-certification via existing CFTC license — no waiting for federal approval. DraftKings shares fall 3.8%. The financial establishment has officially arrived.</div>
+        <span class="tl-badge badge-major">Industry Defining</span>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date"><span class="tl-date-text">2026</span></div>
+      <div class="tl-connector"><div class="tl-dot" style="background:#9b1c1c"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">Kalshi sues New York Gaming Commission</div>
+        <div class="tl-text">Milbank LLP counsel. Federal court filing. CFTC preemption vs state gambling authority goes to formal litigation. The battle that will define US gaming regulation for a generation is now in federal court.</div>
+        <span class="tl-badge badge-pending">Pending — Sector Defining</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <p>"The Nevada Gaming Control Board has clarified that so-called sports event contracts fall under the state's definition of wagering and therefore require a full sports pool license to operate in Nevada — even when listed on federally regulated exchanges supervised by the CFTC."</p>
+    <cite>— NGCB Notice No. 2025-77 · Chair Mike Dreitzer</cite>
+  </div>
+
+</div>
+
+<!-- GLOBAL MARKET IMPACT -->
+<div class="page">
+  <div class="sec-rule"><span class="sec-num">Section 04</span><div class="sec-line"></div></div>
+  <div class="sec-title">Global Market Impact — Six Markets, Six Stories</div>
+  <p class="sec-sub">While the prediction markets war dominates US headlines, the global regulatory picture has never been more consequential.</p>
+
+  <div class="impact-grid">
+    <div class="impact-card">
+      <span class="impact-flag">🇮🇳</span>
+      <div class="impact-market">India</div>
+      <div class="impact-headline">$3.6B Industry Destroyed in 24 Hours</div>
+      <div class="impact-body">Real money gaming banned. Dream11 loses 95% of revenues. BCCI sponsorship terminated. $44M contract cancelled. Social gaming and subscription models permitted. The fastest market destruction on record.</div>
+      <div class="impact-num" style="color:#9b1c1c">95%</div>
+      <div style="font-size:11px;color:#9b1c1c;font-weight:600">Dream11 Revenue Lost</div>
+    </div>
+    <div class="impact-card">
+      <span class="impact-flag">🇺🇸</span>
+      <div class="impact-market">Nevada</div>
+      <div class="impact-headline">Notice 2025-77 Reshapes Licensee Obligations</div>
+      <div class="impact-body">NGCB formally classifies all sports event contracts as wagers. Licensees face disciplinary action for associating with unlicensed prediction market operators. Nevada AG joins DOJ letter on offshore gambling — $400B illegal market estimated.</div>
+      <div class="impact-num" style="color:#9b1c1c">$400B</div>
+      <div style="font-size:11px;color:#9b1c1c;font-weight:600">Estimated Annual Illegal Market</div>
+    </div>
+    <div class="impact-card">
+      <span class="impact-flag">🇱🇰</span>
+      <div class="impact-market">Sri Lanka</div>
+      <div class="impact-headline">New Regulator Operational by June 2026</div>
+      <div class="impact-body">GRA being built to FATF standards. Singapore model as benchmark. 60–70% of gaming activity currently on foreign sites. First-mover window opening for compliant operators. Watch Q3–Q4 2026.</div>
+      <div class="impact-num" style="color:#1a5c35">60–70%</div>
+      <div style="font-size:11px;color:#1a5c35;font-weight:600">Gaming on Foreign Sites — Regulated Gap</div>
+    </div>
+    <div class="impact-card">
+      <span class="impact-flag">🇮🇩</span>
+      <div class="impact-market">Indonesia</div>
+      <div class="impact-headline">Sharp Drop in Activity — Financial Enforcement Working</div>
+      <div class="impact-body">Indonesia reports sharp drop in online gambling activity following OJK financial account freezes — confirming the pattern first identified in our Regulatory Risk Index: financial enforcement works where site blocking fails.</div>
+      <div class="impact-num" style="color:#1a5c35">17,026</div>
+      <div style="font-size:11px;color:#1a5c35;font-weight:600">Accounts Frozen — Effective Enforcement</div>
+    </div>
+    <div class="impact-card">
+      <span class="impact-flag">🇵🇭</span>
+      <div class="impact-market">Philippines</div>
+      <div class="impact-headline">Government Personnel Banned — DILG Directive</div>
+      <div class="impact-body">Philippines DILG banned all government personnel from online gambling. TikTok paused gambling advertising in the Philippines from August. Three-front squeeze: e-wallet, advertising, and government employment restrictions simultaneously.</div>
+      <div class="impact-num" style="color:#92610a">3</div>
+      <div style="font-size:11px;color:#92610a;font-weight:600">Simultaneous Restriction Fronts</div>
+    </div>
+    <div class="impact-card">
+      <span class="impact-flag">🇧🇷</span>
+      <div class="impact-market">Brazil</div>
+      <div class="impact-headline">Flamengo Breaks Sponsorship Records — Market Accelerating</div>
+      <div class="impact-body">Flamengo broke the Brazilian sponsorship record with the Betano deal. Hacksaw Gaming entered via Esportes da Sorte. STATSCORE signed ESPN Brazil. The regulated market is maturing faster than any jurisdiction in LATAM history.</div>
+      <div class="impact-num" style="color:#1a5c35">🚀</div>
+      <div style="font-size:11px;color:#1a5c35;font-weight:600">Fastest Maturing Regulated Market Globally</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="page" style="padding-bottom:0">
+  <div class="sec-rule"><span class="sec-num">Conclusion</span><div class="sec-line"></div></div>
+</div>
+<div class="conclusion">
+  <h2>The Line Has Collapsed. What Happens Next.</h2>
+  <p>The boundary between a financial instrument and a gambling wager no longer exists in any practical sense. CME Group, Trump Media, Robinhood, and the world's largest DFS operators have all crossed it simultaneously. The question is no longer whether prediction markets are gambling. The question is <strong>who gets to regulate them — and on whose terms.</strong></p>
+  <p>Two forces are now in direct collision. The CFTC — backed by Kalshi's legal team and $185 million in venture capital — argues these are federal financial instruments beyond state reach. Thirty-six State Attorneys General, the Nevada Gaming Control Board, and a bipartisan Senate coalition argue these are gambling products subject to state law. Federal court will decide. The outcome will reshape the structure of American gaming for a generation.</p>
+  <p>Meanwhile, the human cost of getting regulation wrong is now measured in billions destroyed overnight. <strong>India's $3.6 billion industry did not slowly decline. It was extinguished in 24 hours.</strong> Dream11's CEO watched 95% of his revenue disappear before close of business on the day the bill passed. Every operator in every market needs to read that number and build their contingency accordingly.</p>
+  <p>The NBA's gambling crisis proves the integration of sports and wagering has reached depths regulators did not anticipate. A head coach and a starting guard. Simultaneously. Federal charges. Mafia connections. This is not a peripheral story — it is the integrity reckoning the industry has been warned about since 2018.</p>
+  <div class="verdict-grid">
+    <div class="verdict-item">
+      <div class="verdict-label">The Decision to Watch</div>
+      <div class="verdict-text">Kalshi v. New York Gaming Commission in federal court. This ruling determines whether CFTC preemption defeats state gambling authority — and with it, whether prediction markets operate nationally or face a state-by-state patchwork that makes them commercially unviable.</div>
+    </div>
+    <div class="verdict-item">
+      <div class="verdict-label">The Market to Watch</div>
+      <div class="verdict-text">Sri Lanka's GRA becomes operational by June 2026. 60–70% of gaming currently on foreign sites. A compliant operator entering now faces a market with almost no licensed competition and a regulator actively seeking international consultancy partnerships.</div>
+    </div>
+    <div class="verdict-item">
+      <div class="verdict-label">The Warning to Heed</div>
+      <div class="verdict-text">India was not a surprise. The signals were visible for 18 months before Parliament acted. Every operator in every market has 18 months of warning before a crisis becomes a catastrophe — if they are reading the right intelligence. This report exists to give you those 18 months.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Gaming Intelligence Hub — Las Vegas</div>
+  <div class="footer-right">
+    Report 2 of Series · March 2026<br>
+    363 articles · 2 years of data · 22+ jurisdictions<br>
+    uet237.github.io/Gaming-Intelligence-Hub
+  </div>
+  <div class="footer-disc">
+    This report is produced for informational and intelligence purposes from publicly available primary sources. It does not constitute legal or financial advice. Regulatory environments change rapidly — verify current status with qualified counsel before making operational decisions. © 2026 Gaming Intelligence Hub, Las Vegas. Licensed under Creative Commons Attribution 4.0 — share freely with attribution.
+  </div>
+</footer>
+
+</body>
+</html>
