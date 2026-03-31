@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Gaming Regulatory Risk Index 2026</title>
+<meta name="description" content="The definitive analysis of gaming regulatory risk across 18 markets — scoring enforcement intensity, market opportunity, and emerging trends. Built from 174 articles across 22 jurisdictions.">
+<meta property="og:title" content="Global Gaming Regulatory Risk Index 2026">
+<meta property="og:description" content="Regulatory risk scores, enforcement patterns, and market opportunity ratings across 18 global gaming markets.">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f7f3ec;
+  --paper-dark: #ede8df;
+  --ink: #1a1612;
+  --ink-light: #3d3530;
+  --muted: #8a7d72;
+  --rule: #d4c9b8;
+  --red: #b83232;
+  --red-light: #f5e8e8;
+  --amber: #b87a20;
+  --amber-light: #f5eed8;
+  --green: #2a6b3c;
+  --green-light: #e4f0e8;
+  --blue: #2040a0;
+  --blue-light: #e8edf8;
+  --gold: #c4922a;
+  --score-high: #8b1a1a;
+  --score-med: #8b5a1a;
+  --score-low: #1a5a2a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* MASTHEAD */
+.masthead {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.masthead-top {
+  border-bottom: 1px solid #3d3530;
+  padding: 12px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+}
+.masthead-pub { color: var(--gold); }
+.masthead-main {
+  padding: 60px 80px 50px;
+  position: relative;
+}
+.masthead-main::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 28px,
+    #ffffff05 28px,
+    #ffffff05 29px
+  );
+  pointer-events: none;
+}
+.report-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.report-eyebrow::before,
+.report-eyebrow::after {
+  content: '';
+  flex: 1;
+  max-width: 60px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+}
+.report-eyebrow::before { max-width: 20px; }
+h1.report-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: var(--paper);
+  line-height: 1.05;
+  max-width: 780px;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+h1.report-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+.report-deck {
+  font-size: 16px;
+  color: #b8a898;
+  max-width: 640px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.report-meta-row {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid #3d3530;
+  border-bottom: 1px solid #3d3530;
+  padding: 16px 0;
+  flex-wrap: wrap;
+}
+.meta-item {
+  padding: 0 32px 0 0;
+  margin-right: 32px;
+  border-right: 1px solid #3d3530;
+}
+.meta-item:last-child { border-right: none; }
+.meta-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+.meta-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--paper);
+  line-height: 1;
+}
+
+/* LAYOUT */
+.page { max-width: 1100px; margin: 0 auto; padding: 60px 80px; }
+
+/* SECTION HEADERS */
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.section-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.section-line { flex: 1; height: 1px; background: var(--rule); }
+.section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.section-sub {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 32px;
+  max-width: 680px;
+}
+
+/* EXECUTIVE SUMMARY */
+.exec-summary {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 40px 48px;
+  margin-bottom: 48px;
+  position: relative;
+}
+.exec-summary::before {
+  content: '"';
+  position: absolute;
+  top: -20px; left: 40px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 8rem;
+  color: var(--gold);
+  opacity: 0.3;
+  line-height: 1;
+}
+.exec-summary h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  color: var(--gold);
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.exec-summary p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #c8b8a8;
+  margin-bottom: 12px;
+}
+.exec-summary p:last-child { margin-bottom: 0; }
+.exec-summary strong { color: var(--paper); font-weight: 600; }
+
+/* KEY FINDINGS */
+.findings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-bottom: 48px;
+}
+.finding-card {
+  background: var(--paper);
+  padding: 28px 24px;
+}
+.finding-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.finding-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.finding-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* RISK MATRIX */
+.risk-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 48px;
+  font-size: 13px;
+}
+.risk-matrix thead th {
+  background: var(--ink);
+  color: var(--gold);
+  padding: 12px 16px;
+  text-align: left;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+.risk-matrix tbody tr {
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.15s;
+}
+.risk-matrix tbody tr:hover { background: var(--paper-dark); }
+.risk-matrix tbody td {
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+.market-name {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 14px;
+}
+.market-flag { font-size: 16px; margin-right: 6px; }
+.score-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.score-bar-track {
+  width: 80px;
+  height: 6px;
+  background: var(--rule);
+  border-radius: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.score-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+.score-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  min-width: 28px;
+}
+.risk-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 2px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.risk-critical { background: #8b1a1a; color: #fff; }
+.risk-high     { background: #b83232; color: #fff; }
+.risk-elevated { background: #b87a20; color: #fff; }
+.risk-moderate { background: #6b8b3a; color: #fff; }
+.risk-low      { background: #2a6b3c; color: #fff; }
+.risk-emerging { background: #204080; color: #fff; }
+.opportunity-dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+/* PATTERN ANALYSIS */
+.pattern-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+.pattern-card {
+  border: 1px solid var(--rule);
+  padding: 28px;
+}
+.pattern-card-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.pattern-card-icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.pattern-card p {
+  font-size: 13px;
+  color: var(--ink-light);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.pattern-card p:last-child { margin-bottom: 0; }
+.evidence-list {
+  list-style: none;
+  margin-top: 12px;
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+}
+.evidence-list li {
+  font-size: 11.5px;
+  color: var(--muted);
+  padding: 4px 0 4px 16px;
+  position: relative;
+  line-height: 1.5;
+}
+.evidence-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 10px;
+}
+
+/* MARKET DEEP DIVES */
+.market-divider {
+  border: none;
+  border-top: 2px solid var(--ink);
+  margin: 48px 0 32px;
+}
+.market-deep {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--rule);
+}
+.market-deep:last-child { border-bottom: none; }
+.market-sidebar {}
+.market-sidebar-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.market-sidebar-flag { font-size: 2rem; margin-bottom: 8px; display: block; }
+.sidebar-scores { margin-top: 16px; }
+.sidebar-score-row {
+  margin-bottom: 10px;
+}
+.sidebar-score-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 3px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.sidebar-score-bar {
+  height: 5px;
+  background: var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.sidebar-score-fill { height: 100%; border-radius: 2px; }
+.sidebar-score-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.market-content h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+.market-content h3:first-child { margin-top: 0; }
+.market-content p {
+  font-size: 13px;
+  color: var(--ink-light);
+  line-height: 1.75;
+  margin-bottom: 8px;
+}
+.market-content .verdict {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 14px 18px;
+  margin-top: 16px;
+  font-size: 13px;
+  border-left: 3px solid var(--gold);
+}
+.market-content .verdict strong { color: var(--gold); }
+
+/* TIMELINE */
+.timeline-section { margin-bottom: 48px; }
+.tl-row {
+  display: grid;
+  grid-template-columns: 120px 20px 1fr;
+  gap: 12px;
+  margin-bottom: 0;
+  align-items: stretch;
+}
+.tl-date {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-align: right;
+  padding-top: 2px;
+  padding-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+.tl-line-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tl-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+.tl-connector {
+  flex: 1;
+  width: 1px;
+  background: var(--rule);
+  margin-top: 2px;
+}
+.tl-body {
+  padding-bottom: 20px;
+}
+.tl-headline {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+.tl-detail { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.tl-outcome {
+  display: inline-block;
+  padding: 1px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+.outcome-win { background: var(--green-light); color: var(--green); }
+.outcome-loss { background: var(--red-light); color: var(--red); }
+.outcome-pending { background: var(--amber-light); color: var(--amber); }
+
+/* CONCLUSION */
+.conclusion {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 48px;
+  margin-top: 48px;
+}
+.conclusion h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.conclusion p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #c8b8a8;
+  margin-bottom: 14px;
+  max-width: 720px;
+}
+.conclusion p strong { color: var(--paper); }
+.conclusion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+  border-top: 1px solid #3d3530;
+  padding-top: 32px;
+}
+.conc-item {}
+.conc-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.conc-text { font-size: 13px; color: #c8b8a8; line-height: 1.6; }
+
+/* FOOTER */
+footer {
+  background: var(--paper-dark);
+  border-top: 2px solid var(--ink);
+  padding: 32px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-brand {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.footer-meta {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1.6;
+}
+.footer-disclaimer {
+  width: 100%;
+  font-size: 10px;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  padding-top: 16px;
+  line-height: 1.6;
+}
+
+/* PULLQUOTE */
+.pullquote {
+  border-left: 4px solid var(--gold);
+  padding: 16px 24px;
+  margin: 24px 0;
+  background: var(--paper-dark);
+}
+.pullquote p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* PRINT */
+@media print {
+  .masthead-top { display: none; }
+  body { font-size: 12px; }
+  h1.report-title { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .masthead-main, .page, footer { padding-left: 24px; padding-right: 24px; }
+  h1.report-title { font-size: 2.2rem; }
+  .findings-grid { grid-template-columns: 1fr; }
+  .pattern-block { grid-template-columns: 1fr; }
+  .market-deep { grid-template-columns: 1fr; }
+  .conclusion-grid { grid-template-columns: 1fr; }
+  .masthead-top { padding: 12px 24px; flex-direction: column; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-top">
+    <span class="masthead-pub">Gaming Intelligence Hub — Las Vegas</span>
+    <span>Vol. 1 · Issue 1 · March 2026</span>
+    <span>174 Articles · 22 Jurisdictions · Weekly Intelligence</span>
+  </div>
+  <div class="masthead-main">
+    <div class="report-eyebrow">Special Report</div>
+    <h1 class="report-title">Global Gaming<br><em>Regulatory Risk</em><br>Index 2026</h1>
+    <p class="report-deck">The definitive scoring of enforcement intensity, market opportunity, and regulatory trajectory across 18 global gaming markets — built from 174 primary source articles across 22 jurisdictions.</p>
+    <div class="report-meta-row">
+      <div class="meta-item"><div class="meta-label">Markets Scored</div><div class="meta-value">18</div></div>
+      <div class="meta-item"><div class="meta-label">Articles Analyzed</div><div class="meta-value">174</div></div>
+      <div class="meta-item"><div class="meta-label">Regulators Tracked</div><div class="meta-value">42</div></div>
+      <div class="meta-item"><div class="meta-label">Operators Monitored</div><div class="meta-value">89</div></div>
+      <div class="meta-item"><div class="meta-label">Published</div><div class="meta-value">Q1 2026</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="page" style="padding-bottom:0">
+  <div class="section-rule">
+    <span class="section-num">Executive Summary</span>
+    <div class="section-line"></div>
+  </div>
+</div>
+<div class="page" style="padding-top:0">
+  <div class="exec-summary">
+    <h2>The Three Things Every Operator Needs to Know in 2026</h2>
+    <p>Global gaming regulation entered a new phase in 2025–2026. The era of passive oversight is over. Across every major jurisdiction — from Ontario to the Philippines, from Brazil to Nevada — regulators are moving from policy to enforcement, and the penalties are escalating.</p>
+    <p>This report scores 18 markets across two critical dimensions: <strong>enforcement intensity</strong> (how aggressively is the regulator acting right now) and <strong>market opportunity</strong> (how much revenue is available and accessible). The combination of these two scores produces a composite Risk-Opportunity Rating that tells operators where to expand, where to be cautious, and where to exit.</p>
+    <p>Three findings demand immediate attention. First, <strong>financial enforcement is replacing site blocking as the primary tool of regulators in Asia and the developing world</strong> — and it is dramatically more effective. Second, <strong>responsible gambling has crossed the line from voluntary best practice to enforceable legal standard</strong> — with Ontario leading a wave that will reach every regulated market within 24 months. Third, <strong>prediction markets have become the most legally contested product in the history of US gaming</strong> — and the CFTC vs. state sovereignty battle will define the sector's structure for a decade.</p>
+  </div>
+
+  <!-- KEY FINDINGS -->
+  <div class="section-rule">
+    <span class="section-num">Key Data Points</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="findings-grid">
+    <div class="finding-card">
+      <div class="finding-num" style="color:#b83232">74%</div>
+      <div class="finding-label" style="color:#b83232">US Market — Illegal</div>
+      <div class="finding-desc">74% of US online gambling gross revenue flows through unlicensed operators. Legalization has not displaced the black market. Regulatory regimes must compete on product and price to succeed.</div>
+    </div>
+    <div class="finding-card">
+      <div class="finding-num" style="color:#b87a20">$67B</div>
+      <div class="finding-label" style="color:#b87a20">Black Market Streaming-Gambling Nexus</div>
+      <div class="finding-desc">Illegal streaming and illegal gambling operate as a $67B symbiotic ecosystem in the US alone. Enforcement must target the whole ecosystem, not individual operators.</div>
+    </div>
+    <div class="finding-card">
+      <div class="finding-num" style="color:#2a6b3c">$6.3B</div>
+      <div class="finding-label" style="color:#2a6b3c">Apollo / IGT / Everi Acquisition</div>
+      <div class="finding-desc">The largest gaming technology deal of 2025 signals that private equity is consolidating the supply chain. Scale and vertical integration are the new competitive priorities.</div>
+    </div>
+    <div class="finding-card">
+      <div class="finding-num" style="color:#b83232">17,026</div>
+      <div class="finding-label" style="color:#b83232">Accounts Frozen — Indonesia</div>
+      <div class="finding-desc">Indonesia's OJK froze over 17,000 gambling-linked bank accounts — after 2 million website blocks failed. Financial enforcement is the effective tool. Site blocking is theater.</div>
+    </div>
+    <div class="finding-card">
+      <div class="finding-num" style="color:#2040a0">$2B</div>
+      <div class="finding-label" style="color:#2040a0">Kalshi Valuation</div>
+      <div class="finding-desc">Prediction markets have reached a $2 billion valuation despite active opposition from 36 State AGs, the NCAA, NFL, and PGA Tour. Regulatory uncertainty has not slowed investment.</div>
+    </div>
+    <div class="finding-card">
+      <div class="finding-num" style="color:#b87a20">59%</div>
+      <div class="finding-label" style="color:#b87a20">DigiPlus Profit Drop — Philippines</div>
+      <div class="finding-desc">One PAGCOR e-wallet delinking directive caused DigiPlus to lose 59% of Q3 net income. Payment channel concentration is an existential operator risk in every market.</div>
+    </div>
+  </div>
+</div>
+
+<!-- RISK MATRIX -->
+<div class="page">
+  <div class="section-rule">
+    <span class="section-num">Section 01</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="section-title">The Global Risk Matrix</div>
+  <div class="section-sub">18 markets scored on Enforcement Intensity (1–10) and Market Opportunity (1–10). Composite Risk-Opportunity Rating derived from both. Scored from primary source analysis of 174 articles.</div>
+
+  <table class="risk-matrix">
+    <thead>
+      <tr>
+        <th>Market</th>
+        <th>Risk Rating</th>
+        <th>Enforcement Score</th>
+        <th>Opportunity Score</th>
+        <th>Trajectory</th>
+        <th>Key Regulator</th>
+        <th>Primary Risk Factor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- HIGH ENFORCEMENT / HIGH OPPORTUNITY -->
+      <tr>
+        <td><span class="market-flag">🇺🇸</span><span class="market-name">USA — Federal (Prediction Markets)</span></td>
+        <td><span class="risk-badge risk-critical">Critical</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:90%;background:#8b1a1a"></div></div>
+            <span class="score-num" style="color:#8b1a1a">9/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">10/10</span>
+          </div>
+        </td>
+        <td>⚡ Escalating</td>
+        <td>CFTC / 36 State AGs</td>
+        <td>CFTC vs. state sovereignty — existential legal battle unresolved</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇨🇦</span><span class="market-name">Canada — Ontario</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:#b83232"></div></div>
+            <span class="score-num" style="color:#b83232">8/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">8/10</span>
+          </div>
+        </td>
+        <td>📈 Tightening</td>
+        <td>AGCO</td>
+        <td>Responsible gambling enforcement — duty-to-act now enforceable standard</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇦🇺</span><span class="market-name">Australia</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:#b83232"></div></div>
+            <span class="score-num" style="color:#b83232">8/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">7/10</span>
+          </div>
+        </td>
+        <td>📈 Tightening</td>
+        <td>ACMA / AUSTRAC</td>
+        <td>World's most active ISP blocking regime; advertising ban politically imminent</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇺🇸</span><span class="market-name">USA — iGaming States (NJ, PA, MI)</span></td>
+        <td><span class="risk-badge risk-elevated">Elevated</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:60%;background:#b87a20"></div></div>
+            <span class="score-num" style="color:#b87a20">6/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:90%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">9/10</span>
+          </div>
+        </td>
+        <td>➡ Stable</td>
+        <td>MGCB / NJDGE / PGCB</td>
+        <td>Player protection litigation increasing; black market at 74% is structural threat</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇵🇭</span><span class="market-name">Philippines</span></td>
+        <td><span class="risk-badge risk-elevated">Elevated</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#b87a20"></div></div>
+            <span class="score-num" style="color:#b87a20">7/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">7/10</span>
+          </div>
+        </td>
+        <td>📈 Tightening</td>
+        <td>PAGCOR / CICC</td>
+        <td>E-wallet delinking, church pressure, influencer crackdown — 3-front squeeze</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇮🇳</span><span class="market-name">India</span></td>
+        <td><span class="risk-badge risk-elevated">Elevated</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#b87a20"></div></div>
+            <span class="score-num" style="color:#b87a20">7/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">8/10</span>
+          </div>
+        </td>
+        <td>⚡ Pivotal</td>
+        <td>India Supreme Court / ED</td>
+        <td>Gameskraft ruling will define skill vs. gambling — entire sector in legal limbo</td>
+      </tr>
+      <!-- MODERATE -->
+      <tr>
+        <td><span class="market-flag">🇧🇷</span><span class="market-name">Brazil</span></td>
+        <td><span class="risk-badge risk-moderate">Moderate</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:40%;background:#6b8b3a"></div></div>
+            <span class="score-num" style="color:#6b8b3a">4/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:90%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">9/10</span>
+          </div>
+        </td>
+        <td>🟢 Opening</td>
+        <td>SRJ (Brazil Gaming Regulator)</td>
+        <td>Tax instability — 15% betting tax was proposed and stripped; uncertainty remains</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇺🇸</span><span class="market-name">USA — Emerging States (WI, MS, MA, MD)</span></td>
+        <td><span class="risk-badge risk-moderate">Moderate</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:30%;background:#6b8b3a"></div></div>
+            <span class="score-num" style="color:#6b8b3a">3/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">7/10</span>
+          </div>
+        </td>
+        <td>⏳ Legislative</td>
+        <td>State Legislatures</td>
+        <td>Legislative unpredictability — bills stall, gut-and-amend risk, tribal opposition</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇳🇿</span><span class="market-name">New Zealand</span></td>
+        <td><span class="risk-badge risk-moderate">Moderate</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:40%;background:#6b8b3a"></div></div>
+            <span class="score-num" style="color:#6b8b3a">4/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:50%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">5/10</span>
+          </div>
+        </td>
+        <td>⚖️ Contested</td>
+        <td>NZ Parliament</td>
+        <td>Pokie machine community funding dependency blocks online casino legalization</td>
+      </tr>
+      <!-- INDONESIA / ASIA -->
+      <tr>
+        <td><span class="market-flag">🇮🇩</span><span class="market-name">Indonesia</span></td>
+        <td><span class="risk-badge risk-critical">Critical</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:#8b1a1a"></div></div>
+            <span class="score-num" style="color:#8b1a1a">10/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:10%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">1/10</span>
+          </div>
+        </td>
+        <td>🚫 Hostile</td>
+        <td>OJK / Ministry of Communication</td>
+        <td>Complete prohibition; OJK financial freezes more effective than site blocking</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇯🇵</span><span class="market-name">Japan</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:#b83232"></div></div>
+            <span class="score-num" style="color:#b83232">8/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:20%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">2/10</span>
+          </div>
+        </td>
+        <td>🚫 Hostile</td>
+        <td>Tokyo Metropolitan Police</td>
+        <td>Strict prohibition; celebrity exposure risk high; underage illegal gambling rising</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇲🇾</span><span class="market-name">Malaysia</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#b83232"></div></div>
+            <span class="score-num" style="color:#b83232">7/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:20%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">2/10</span>
+          </div>
+        </td>
+        <td>🚫 Restrictive</td>
+        <td>KKCCCI / Multi-Agency</td>
+        <td>Cross-agency enforcement escalating; community and business pressure intensifying</td>
+      </tr>
+      <!-- LOW RISK / EMERGING -->
+      <tr>
+        <td><span class="market-flag">🇦🇪</span><span class="market-name">UAE</span></td>
+        <td><span class="risk-badge risk-emerging">Emerging</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:20%;background:#204080"></div></div>
+            <span class="score-num" style="color:#204080">2/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">7/10</span>
+          </div>
+        </td>
+        <td>🟢 Opening</td>
+        <td>UAE Licensing Authority</td>
+        <td>Nascent regime — Yolo Group already moved. Early-mover window open now.</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🌎</span><span class="market-name">Latin America (Peru, Colombia, Argentina)</span></td>
+        <td><span class="risk-badge risk-low">Low</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:30%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">3/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">7/10</span>
+          </div>
+        </td>
+        <td>🟢 Opening</td>
+        <td>Country-specific</td>
+        <td>Payments infrastructure gap — digital wallets prerequisite for market entry</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇧🇩</span><span class="market-name">Bangladesh</span></td>
+        <td><span class="risk-badge risk-critical">Critical</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:90%;background:#8b1a1a"></div></div>
+            <span class="score-num" style="color:#8b1a1a">9/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:10%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">1/10</span>
+          </div>
+        </td>
+        <td>🚫 Hostile</td>
+        <td>Bangladesh Bank / ICT Authority</td>
+        <td>MFS transaction ban; portal shutdowns for betting ads — zero viable market</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇬🇧</span><span class="market-name">United Kingdom</span></td>
+        <td><span class="risk-badge risk-elevated">Elevated</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:70%;background:#b87a20"></div></div>
+            <span class="score-num" style="color:#b87a20">7/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:80%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">8/10</span>
+          </div>
+        </td>
+        <td>📈 Tightening</td>
+        <td>UKGC</td>
+        <td>UKGC compliance standards increasingly exported globally — early compliance pays</td>
+      </tr>
+      <tr>
+        <td><span class="market-flag">🇫🇮</span><span class="market-name">Finland / Nordics</span></td>
+        <td><span class="risk-badge risk-moderate">Moderate</span></td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:50%;background:#6b8b3a"></div></div>
+            <span class="score-num" style="color:#6b8b3a">5/10</span>
+          </div>
+        </td>
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track"><div class="score-bar-fill" style="width:60%;background:#2a6b3c"></div></div>
+            <span class="score-num" style="color:#2a6b3c">6/10</span>
+          </div>
+        </td>
+        <td>➡ Stable</td>
+        <td>Nordic Regulators</td>
+        <td>Regulatory expectations around female leadership and responsible gambling are distinct</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- PATTERN ANALYSIS -->
+<div class="page">
+  <div class="section-rule">
+    <span class="section-num">Section 02</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="section-title">The Four Defining Patterns of 2026</div>
+  <div class="section-sub">Cross-market analysis of 174 articles reveals four structural trends reshaping global gaming regulation. These are not predictions — they are patterns already confirmed by primary evidence.</div>
+
+  <div class="pattern-block">
+    <div class="pattern-card">
+      <div class="pattern-card-title">
+        <div class="pattern-card-icon" style="background:#fee2e2">🏦</div>
+        Pattern 1: Financial Enforcement Replaces Site Blocking
+      </div>
+      <p>Across three separate regulatory systems — Philippines, Indonesia, and Bangladesh — the same pattern has emerged independently and simultaneously. Site blocking is visible, politically easy, and completely ineffective. Financial enforcement is invisible, technically complex, and devastatingly effective.</p>
+      <p>Indonesia removed 2 million gambling websites. Its own Justice Minister publicly acknowledged the crackdown failed. The OJK then froze 17,026 bank accounts. That worked. The Philippines accidentally blocked Tumblr while targeting gambling sites, exposing the bluntness of URL-based enforcement. PAGCOR then delinked e-wallets from gambling apps. DigiPlus lost 59% of its quarterly profit overnight.</p>
+      <div class="pullquote"><p>"The pattern is clear across three jurisdictions: URL enforcement is theater. Payment enforcement is real."</p></div>
+      <p>The implication for operators is structural: diversified payment infrastructure is no longer a competitive advantage — it is an existential survival requirement.</p>
+      <ul class="evidence-list">
+        <li>Indonesia: 2M sites blocked → enforcement admitted failure → 17,026 accounts frozen → effective</li>
+        <li>Philippines: PAGCOR e-wallet delinking → DigiPlus -59% profit in one quarter</li>
+        <li>Bangladesh: Bangladesh Bank MFS ban → more disruptive than any site blocking order</li>
+      </ul>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-card-title">
+        <div class="pattern-card-icon" style="background:#fef9c3">⚖️</div>
+        Pattern 2: Responsible Gambling Becomes Enforcement
+      </div>
+      <p>For a decade, responsible gambling was voluntary. A box to tick. A PR exercise. In 2025–2026 that changed permanently. Ontario's AGCO turned responsible gambling into an enforceable legal standard, and every other regulated market will follow within 24 months.</p>
+      <p>AGCO fined theScore $105,000 not for illegal activity — but for failing to intervene when a player showed signs of high-risk behavior. That is a legal first. The "duty to act" on at-risk players is now an enforceable obligation in Ontario. Casino Days was fined $54,000 for a gap between advertised and delivered bonus terms. A Michigan player sued BetMGM for $3.1 million and the state Supreme Court ruled 7-0 in her favor.</p>
+      <p>Operators outside Ontario have approximately 12–18 months before their regulators catch up. The window to build compliant RG infrastructure proactively — rather than reactively after a fine — is closing.</p>
+      <ul class="evidence-list">
+        <li>AGCO → theScore: $105,000 fine for failure to intervene with high-risk player</li>
+        <li>AGCO → Casino Days: $54,000 for deceptive bonus advertising</li>
+        <li>Michigan Supreme Court: 7-0 ruling in favor of player vs. BetMGM ($3.1M case)</li>
+        <li>MGM + BetMGM: $1M+ voluntary RG pledge — reading the regulatory direction</li>
+      </ul>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-card-title">
+        <div class="pattern-card-icon" style="background:#dbeafe">🔮</div>
+        Pattern 3: Prediction Markets Are Eating Sports Betting
+      </div>
+      <p>Kalshi hit $1 billion in Super Bowl trading volume in a single day. DraftKings — the largest US sportsbook — launched prediction market products. PrizePicks registered as an NFA Futures Commission Merchant. The largest DFS operators in America are pivoting to prediction markets under CFTC regulation, and they are doing it faster than state gambling regulators can respond.</p>
+      <p>The legal battle is the most consequential in US gaming history. 36 State Attorneys General filed a bipartisan amicus brief arguing CFTC regulation does not preempt state gambling law. A federal judge ruled Kalshi's contracts are not gambling under tribal compacts. The outcome of this CFTC vs. states battle will determine whether prediction markets operate nationally or face a state-by-state patchwork that may make them commercially unviable.</p>
+      <ul class="evidence-list">
+        <li>Kalshi: $1B Super Bowl volume · $2B valuation · $185M raised</li>
+        <li>36 State AGs: bipartisan amicus brief opposing Kalshi's federal preemption argument</li>
+        <li>DraftKings, PrizePicks, Underdog, Crypto.com, High Roller all entering the market</li>
+        <li>MLB partnered with Polymarket; NFL/PGA Tour maintain endorsement bans</li>
+      </ul>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-card-title">
+        <div class="pattern-card-icon" style="background:#dcfce7">🌎</div>
+        Pattern 4: Grey Market Operators Are Exiting — Voluntarily
+      </div>
+      <p>Something historically unusual is happening: operators are abandoning profitable grey market revenues to pursue licensed status. Yolo Group — operator of Sportsbet.io and Bitcasino.io, two of the world's largest crypto gambling brands — shut both platforms to pursue UAE vendor licenses. BoomBet exited Australia entirely. PointsBet rejected a takeover and was eventually acquired.</p>
+      <p>The pattern reveals that the economics of grey market operation are deteriorating faster than the opportunities in licensed markets are developing. Enforcement is intensifying globally. Payment processors are restricting grey market access. Insurance, banking, and institutional relationships require licensed status. The grey market premium is shrinking.</p>
+      <p>For B2B suppliers and technology providers, this is the most important commercial signal in the dataset: the addressable licensed market is expanding faster than any individual market's organic growth rate.</p>
+      <ul class="evidence-list">
+        <li>Yolo Group: closed Sportsbet.io and Bitcasino.io to pursue UAE licensing</li>
+        <li>BoomBet: exited Australia — market consolidation accelerating around major players</li>
+        <li>PointsBet: rejected Betr takeover, acquired by Mixi — market exits through M&A</li>
+        <li>Brazil licensing: Altenar, FIRST/Pixbet, BetMGM/Kambi all entering under new rules</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- PREDICTION MARKETS TIMELINE -->
+<div class="page">
+  <div class="section-rule">
+    <span class="section-num">Section 03</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="section-title">The Prediction Markets Legal Battle — Full Timeline</div>
+  <div class="section-sub">The most contested legal question in US gaming history. Mapped chronologically with outcomes. This is the reference document the industry needs.</div>
+
+  <div class="timeline-section">
+    <div class="tl-row">
+      <div class="tl-date">2023–2024</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">Kalshi launches sports event contracts under CFTC framework</div><div class="tl-detail">Kalshi argues event contracts are commodity futures under the CEA, not gambling under state law. CFTC oversight claimed as sufficient. State gambling laws preempted.</div><span class="tl-outcome outcome-pending">Contested</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">Early 2025</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">NCAA demands CFTC halt college basketball contracts</div><div class="tl-detail">NCAA argues sports event contracts on college games endanger athlete integrity. Files formal objection with CFTC demanding halt to Kalshi's March Madness contracts.</div><span class="tl-outcome outcome-loss">NCAA Lost — Contracts Continued</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">Feb 2025</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">Kalshi — $1 billion Super Bowl trading volume</div><div class="tl-detail">Single-day record establishes prediction markets as a mainstream financial product. Volume exceeds many traditional sportsbooks on the same event.</div><span class="tl-outcome outcome-win">Market Milestone</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">Feb 2025</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">Kalshi raises $185M at $2B valuation</div><div class="tl-detail">Major institutional investors bet on CFTC preemption prevailing. Venture capital treats regulatory uncertainty as temporary friction, not fundamental risk.</div><span class="tl-outcome outcome-win">Industry Validation</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">Mar 2025</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">36 State Attorneys General file bipartisan amicus brief opposing Kalshi</div><div class="tl-detail">Largest bipartisan coalition in US gaming legal history. AGs argue CFTC regulation cannot preempt state gambling authority. This is the existential legal challenge to the sector.</div><span class="tl-outcome outcome-pending">Pending — Federal Case</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">Mar 2025</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">Federal judge rejects tribal bid to block Kalshi's sports contracts</div><div class="tl-detail">California federal court rules Kalshi's event contracts are not gambling under tribal compacts. First major judicial precedent favoring the CFTC framework.</div><span class="tl-outcome outcome-win">Kalshi Won</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">Mar 2025</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">Kalshi hits record March Madness trading volumes</div><div class="tl-detail">College basketball becomes Kalshi's highest-volume product. Regulatory ambiguity has not slowed market growth — it has accelerated it as first-mover advantage compounds.</div><span class="tl-outcome outcome-win">Market Record</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">2025</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">DraftKings, PrizePicks, Underdog, Crypto.com all enter prediction markets</div><div class="tl-detail">The largest operators in US gambling pivot to prediction markets simultaneously. The sector crosses from niche to mainstream. State regulators warned that experimenting with prediction markets could jeopardize their gambling licenses.</div><span class="tl-outcome outcome-pending">Industry Shift</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">2025</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">Polymarket sues Massachusetts AG to block state enforcement</div><div class="tl-detail">State vs. federal jurisdiction becomes a live courtroom battle as Massachusetts attempts to shut down Polymarket's sports event contracts within state borders.</div><span class="tl-outcome outcome-pending">Pending</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">2025–2026</div>
+      <div class="tl-line-col"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">US Senate introduces bipartisan bill to ban sports betting on prediction markets</div><div class="tl-detail">Congressional pushback signals prediction markets may need federal legislation rather than regulatory tolerance. This is the critical inflection point — if the bill advances, the sector's structure changes fundamentally.</div><span class="tl-outcome outcome-pending">Legislative — Pending</span></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-date">2026</div>
+      <div class="tl-line-col"><div class="tl-dot" style="background:#b83232"></div><div class="tl-connector"></div></div>
+      <div class="tl-body"><div class="tl-headline">MLB partners with Polymarket · NFL/PGA Tour maintain endorsement bans</div><div class="tl-detail">The sports league landscape splits: MLB adopts pragmatic partnership approach; NFL and PGA Tour maintain prohibition on player endorsements. Two competing models will shape the sector's sports relationships for years.</div><span class="tl-outcome outcome-pending">Ongoing — Sector-Defining</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- MARKET DEEP DIVES -->
+<div class="page">
+  <div class="section-rule">
+    <span class="section-num">Section 04</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="section-title">Five Markets — Deep Intelligence</div>
+  <div class="section-sub">The five markets with the highest intelligence value from the dataset — what's happening, why it matters, and what operators should do.</div>
+
+  <!-- ONTARIO -->
+  <div class="market-deep">
+    <div class="market-sidebar">
+      <span class="market-sidebar-flag">🇨🇦</span>
+      <div class="market-sidebar-name">Ontario</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px">Canada's Most Active Market</div>
+      <div class="sidebar-scores">
+        <div class="sidebar-score-row">
+          <div class="sidebar-score-label">Enforcement</div>
+          <div class="sidebar-score-bar"><div class="sidebar-score-fill" style="width:80%;background:#b83232"></div></div>
+          <div class="sidebar-score-num" style="color:#b83232">8 / 10</div>
+        </div>
+        <div class="sidebar-score-row">
+          <div class="sidebar-score-label">Opportunity</div>
+          <div class="sidebar-score-bar"><div class="sidebar-score-fill" style="width:80%;background:#2a6b3c"></div></div>
+          <div class="sidebar-score-num" style="color:#2a6b3c">8 / 10</div>
+        </div>
+        <div class="sidebar-score-row">
+          <div class="sidebar-score-label">Trajectory</div>
+          <div style="font-size:13px;font-weight:600;color:#b87a20;margin-top:4px">📈 Tightening</div>
+        </div>
+      </div>
+    </div>
+    <div class="market-content">
+      <h3>What Is Happening</h3>
+      <p>Ontario's AGCO has become the most active responsible gambling enforcer in North America, and it is setting precedents that will spread globally. In a single reporting period, AGCO fined theScore $105,000 for failure to intervene with high-risk players and Casino Days $54,000 for deceptive bonus terms. These are not large fines by global standards — but they are precedent-setting in their legal basis.</p>
+      <h3>The Breakthrough: Duty to Act</h3>
+      <p>The "duty to act" standard established by the theScore fine is the most important regulatory development in responsible gambling globally. It means operators cannot passively wait for players to self-exclude — they must proactively identify and intervene with at-risk players. This shifts the compliance burden dramatically and requires real-time player behavior monitoring systems that most operators do not currently have.</p>
+      <h3>The Market Opportunity</h3>
+      <p>Ontario is simultaneously the most compliant-demanding and commercially attractive market in Canada. It approved a cross-border liquidity ruling allowing licensed operators to pool with non-Canadian players — a transformative ruling for poker and peer-to-peer gaming. Mixi's acquisition of PointsBet cleared AGCO regulatory approval, showing the foreign ownership pathway exists. New operators — Betty Casino, Maverick Games, NetGaming, High Roller — are all launching, confirming market viability.</p>
+      <div class="verdict"><strong>Operator Verdict:</strong> Enter Ontario only with fully built RG infrastructure. Budget for compliance as a core operational cost, not an afterthought. The duty-to-act standard is not optional and the AGCO has demonstrated willingness to fine repeatedly.</div>
+    </div>
+  </div>
+
+  <!-- BRAZIL -->
+  <div class="market-deep">
+    <div class="market-sidebar">
+      <span class="market-sidebar-flag">🇧🇷</span>
+      <div class="market-sidebar-name">Brazil</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px">The Biggest Opportunity of 2026</div>
+      <div class="sidebar-scores">
+        <div class="sidebar-score-row">
+          <div class="sidebar-score-label">Enforcement</div>
+          <div class="sidebar-score-bar"><div class="sidebar-score-fill" style="width:40%;background:#6b8b3a"></div></div>
+          <div class="sidebar-score-num" style="color:#6b8b3a">4 / 10</div>
+        </div>
+        <div class="sidebar-score-row">
+          <div class="sidebar-score-label">Opportunity</div>
+          <div class="sidebar-score-bar"><div class="sidebar-score-fill" style="width:90%;background:#2a6b3c"></div></div>
+          <div class="sidebar-score-num" style="color:#2a6b3c">9 / 10</div>
+        </div>
+        <div class="sidebar-score-row">
+          <div class="sidebar-score-label">Trajectory</div>
+          <div style="font-size:13px;font-weight:600;color:#2a6b3c;margin-top:4px">🟢 Opening</div>
+        </div>
+      </div>
+    </div>
+    <div class="market-content">
+      <h3>The Race to Brazil</h3>
+      <p>Brazil's new fixed-odds betting regulation has triggered the fastest B2B market entry race in global gaming. In the dataset alone: Altenar entered via Multibet and hired local staff, FIRST partnered with Pixbet for long-term supply, Kambi partnered with Superbet for LATAM coverage, 7777 Gaming went live via B4, Inspired Entertainment launched virtual sports via BetMGM/Kambi, and BetMGM itself entered the market. All within a single reporting period.</p>
+      <h3>The Risk: Tax Instability</h3>
+      <p>Brazil's Chamber of Deputies stripped a proposed 15% betting tax from the Anti-Faction Bill — but the fact it was proposed at all signals fiscal instability. Gambling taxation in Brazil is politically contested. Operators must actively engage the legislative process or face unpredictable fiscal outcomes that can render otherwise viable business models uneconomic overnight.</p>
+      <h3>The Local Hiring Signal</h3>
+      <p>Altenar's three local hires in Brazil are not just operational — they are a regulatory compliance signal. Brazilian regulators expect operators to invest in local human capital, not just technology deployment. B2B suppliers entering Brazil without local team building face regulatory friction that technology-first operators will not.</p>
+      <div class="verdict"><strong>Operator Verdict:</strong> Enter Brazil now. The licensing window, competitive landscape, and enforcement environment make this the best risk-adjusted market entry opportunity globally in 2026. Move fast — first-mover advantages in newly regulated markets compound rapidly and the window is already narrowing.</div>
+    </div>
+  </div>
+
+  <!-- INDIA -->
+  <div class="market-deep">
+    <div class="market-sidebar">
+      <span class="market-sidebar-flag">🇮🇳</span>
+      <div class="market-sidebar-name">India</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px">The Pivotal Moment</div>
+      <div class="sidebar-scores">
+        <div class="sidebar-score-row">
+          <div class="sidebar-score-label">Enforcement</div>
+          <div class="sidebar-score-bar"><div class="sidebar-score-fill" style="width:70%;background:#b87a20"></div></div>
+          <div class="sidebar-score-num" style="color:#b87a20">7 / 10</div>
+        </div>
+        <div class="sidebar-score-row">
+          <div class="sidebar-score-label">Opportunity</div>
+          <div class="sidebar-score-bar"><div class="sidebar-score-fill" style="width:80%;background:#2a6b3c"></div></div>
+          <div class="sidebar-score-num" style="color:#2a6b3c">8 / 10</div>
+        </div>
+        <div class="sidebar-score-row">
+          <div class="sidebar-score-label">Trajectory</div>
+          <div style="font-size:13px;font-weight:600;color:#b87a20;margin-top:4px">⚡ Pivotal</div>
+        </div>
+      </div>
+    </div>
+    <div class="market-content">
+      <h3>The Gameskraft Ruling Changes Everything</h3>
+      <p>India's Supreme Court is sitting on the most consequential gaming ruling in Asia. The Gameskraft case will legally define the boundary between games of skill — legal across India — and gambling, which is state-regulated. The entire fantasy sports and online gaming sector's future hangs on a single ruling. The Supreme Court already halted coercive action against Fanmade11 and 9Stacks pending this decision, signaling judicial awareness of the sector's scale.</p>
+      <h3>FEMA as Enforcement Weapon</h3>
+      <p>The Enforcement Directorate seized ₹590 crore ($70M+) in Winzo Group assets under FEMA — India's foreign exchange law — for alleged foreign investment structure violations. This is a new enforcement vector: regulators are using financial crimes law against gaming companies where gambling law is unclear or inapplicable. Foreign-invested gaming companies in India now face FEMA risk that requires specialist legal structuring.</p>
+      <h3>The Advertising Collapse</h3>
+      <p>Google's India-specific ban on rummy and DFS advertising from January 2026 removes the primary customer acquisition channel for the sector's largest operators. Dream11's exit from BCCI title sponsorship shows the advertising restrictions are having commercial consequences at the highest level of Indian sports sponsorship.</p>
+      <div class="verdict"><strong>Operator Verdict:</strong> Wait for the Gameskraft ruling before material capital deployment. Monitor closely — a favorable ruling makes India one of the three most attractive gaming markets globally. An unfavorable ruling creates 12–24 months of sector-wide restructuring. The risk-reward ratio justifies watching costs carefully while staying positioned.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="page" style="padding-bottom:0">
+  <div class="section-rule">
+    <span class="section-num">Conclusion</span>
+    <div class="section-line"></div>
+  </div>
+</div>
+<div class="conclusion">
+  <h2>What This Data Tells Us About 2026 and Beyond</h2>
+  <p>The global gaming industry is in the most consequential regulatory transition of its modern history. Three forces are converging simultaneously: the professionalization of enforcement, the emergence of new legal product categories, and the voluntary migration of operators from grey to licensed markets.</p>
+  <p>The operators who thrive in this environment share three characteristics. They treat <strong>compliance as infrastructure</strong>, not as a cost center. They move into <strong>emerging regulated markets early</strong>, when enforcement is low and first-mover advantages are large. And they maintain <strong>diversified payment architecture</strong> that cannot be disrupted by a single regulatory directive.</p>
+  <p>The operators who will struggle are those still treating regulation as something that happens to them rather than something they shape. The AGCO did not surprise theScore — the writing was on the wall. The PAGCOR e-wallet directive did not surprise the Philippine market — the warnings had been building for months. The patterns are visible for those who look. This report is built on looking.</p>
+  <div class="conclusion-grid">
+    <div class="conc-item">
+      <div class="conc-label">The Opportunity</div>
+      <div class="conc-text">Brazil and UAE represent the two best risk-adjusted market entry opportunities globally in 2026. Both have low enforcement intensity, high commercial opportunity, and early-mover advantages that are already narrowing.</div>
+    </div>
+    <div class="conc-item">
+      <div class="conc-label">The Warning</div>
+      <div class="conc-text">Responsible gambling enforcement is coming to every regulated market. Operators who build compliant RG infrastructure now — before their regulator mandates it — will spend less and face less operational disruption than those who wait.</div>
+    </div>
+    <div class="conc-item">
+      <div class="conc-label">The Watch</div>
+      <div class="conc-text">The CFTC vs. State AGs battle on prediction markets and India's Gameskraft ruling are the two decisions that will most significantly reshape global gaming in the next 12 months. Watch both closely.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Gaming Intelligence Hub</div>
+  <div class="footer-meta">
+    Published March 2026 · Las Vegas, Nevada<br>
+    Built from 174 primary source articles across 22 jurisdictions<br>
+    Weekly intelligence brief — updated every Monday
+  </div>
+  <div class="footer-disclaimer">
+    This report is produced for informational and intelligence purposes. All analysis is derived from publicly available primary sources. This document does not constitute legal or financial advice. Regulatory environments change rapidly — verify current status with qualified legal counsel before making operational decisions. © 2026 Gaming Intelligence Hub. Licensed under Creative Commons Attribution 4.0 — share freely with attribution.
+  </div>
+</footer>
+
+</body>
+</html>
