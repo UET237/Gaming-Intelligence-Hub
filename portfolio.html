@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umer Ehsan Tarar — Gaming Content Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e0c0a;--paper:#f5f1eb;--paper2:#ede8df;--gold:#b8860b;--muted:#6b6358;--rule:#d4ccc0;--white:#ffffff;--green:#2e7d32}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:15px;line-height:1.7}
+.masthead{background:var(--ink);color:var(--paper);padding:64px 80px 56px}
+.masthead-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:40px;display:flex;align-items:center;gap:20px}
+.masthead-eyebrow::after{content:'';flex:1;height:1px;background:#2a2520}
+.masthead-name{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:1;color:var(--paper);letter-spacing:-.02em;margin-bottom:14px}
+.masthead-name em{font-style:italic;color:var(--gold)}
+.masthead-role{font-size:12px;color:#a09080;letter-spacing:.1em;text-transform:uppercase;font-weight:500;margin-bottom:36px}
+.masthead-bio{max-width:640px;font-size:15px;color:#c8b8a8;line-height:1.8;margin-bottom:40px;font-weight:300}
+.masthead-stats{display:flex;gap:0;border-top:1px solid #2a2520;padding-top:24px;flex-wrap:wrap}
+.mstat{padding-right:40px;margin-right:40px;border-right:1px solid #2a2520}
+.mstat:last-child{border-right:none}
+.mstat-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold);display:block;line-height:1;margin-bottom:3px}
+.mstat-l{font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:#5a5048;font-weight:600}
+nav{background:var(--paper2);border-bottom:1px solid var(--rule);padding:0 80px;display:flex;position:sticky;top:0;z-index:100;overflow-x:auto}
+nav a{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:15px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s}
+nav a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.page{max-width:880px;margin:0 auto;padding:64px 40px}
+.sec-head{display:flex;align-items:center;gap:16px;margin-bottom:6px}
+.sec-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.sec-line{flex:1;height:1px;background:var(--rule)}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;margin-bottom:6px}
+.sec-desc{color:var(--muted);font-size:13px;margin-bottom:14px;max-width:580px}
+.badge{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--rule);color:var(--muted);margin-bottom:36px}
+.article{background:var(--white);border:1px solid var(--rule);margin-bottom:28px}
+.art-head{background:var(--ink);padding:22px 30px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.art-tag{font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:7px}
+.art-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--paper);line-height:1.3}
+.art-num{font-family:'DM Mono',monospace;font-size:9px;color:#5a5048;white-space:nowrap;margin-top:3px}
+.art-body{padding:30px}
+.art-body p{font-size:14px;line-height:1.85;color:#2a2520;margin-bottom:13px}
+.art-body p:last-child{margin-bottom:0}
+.art-foot{padding:10px 30px;background:var(--paper2);border-top:1px solid var(--rule);font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.07em;display:flex;gap:20px;flex-wrap:wrap}
+.takeaways{background:var(--paper);border:1px solid var(--rule);margin:0 30px 30px;padding:18px 22px}
+.tk-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.takeaways ul{list-style:none;padding:0}
+.takeaways li{font-size:13px;line-height:1.6;color:var(--ink);padding:7px 0 7px 18px;border-bottom:1px solid var(--rule);position:relative}
+.takeaways li::before{content:'—';position:absolute;left:0;color:var(--gold);font-weight:700}
+.takeaways li:last-child{border-bottom:none;padding-bottom:0}
+.divider{background:var(--paper2);padding:64px 0}
+.slot{background:var(--white);border:1px solid var(--rule);margin-bottom:44px}
+.slot-head{background:var(--ink);padding:28px 36px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px}
+.slot-name{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--paper)}
+.slot-prov{font-size:10px;color:#7a6858;margin-top:3px;font-family:'DM Mono',monospace;letter-spacing:.1em}
+.slot-stats{display:flex;gap:24px;flex-wrap:wrap}
+.ss-val{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--gold);display:block}
+.ss-label{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#5a5048}
+.slot-body{padding:36px}
+.slot-body h2{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin:28px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--rule)}
+.slot-body h2:first-child{margin-top:0}
+.slot-body p{font-size:14px;line-height:1.85;color:#2a2520;margin-bottom:13px}
+.slot-foot{padding:10px 36px;background:var(--paper2);border-top:1px solid var(--rule);font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.07em}
+.gih-card{background:var(--ink);padding:44px 52px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-bottom:20px}
+.gih-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.gih-title{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:var(--paper);line-height:1.2;margin-bottom:14px}
+.gih-desc{font-size:13px;color:#a09080;line-height:1.7;margin-bottom:22px}
+.gih-link{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--gold);padding:9px 18px}
+.gih-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a2520;border:1px solid #2a2520}
+.gs{background:#1a1612;padding:22px 18px;text-align:center}
+.gs-n{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gold);display:block;margin-bottom:3px}
+.gs-l{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#5a5048}
+.contact{background:var(--ink);padding:44px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+.c-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--paper)}
+.c-detail{font-size:13px;color:#a09080;margin-top:3px}
+.c-avail{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:#66bb6a;margin-top:7px}
+.c-avail::before{content:'';width:7px;height:7px;border-radius:50%;background:#66bb6a}
+.c-links{display:flex;gap:10px;flex-wrap:wrap}
+.c-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper);text-decoration:none;border:1px solid #3a3028;padding:9px 16px;transition:all .2s}
+.c-link:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media(max-width:768px){
+.masthead{padding:40px 20px}.masthead-name{font-size:2.4rem}
+nav{padding:0 12px}.page{padding:48px 20px}
+.art-head{flex-direction:column}.slot-head{flex-direction:column}
+.gih-card{grid-template-columns:1fr}.contact{padding:36px 20px}
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-eyebrow">Gaming Content Portfolio &nbsp;·&nbsp; Las Vegas, NV &nbsp;·&nbsp; 2026</div>
+  <div class="masthead-name">Umer Ehsan <em>Tarar</em></div>
+  <div class="masthead-role">Gaming Content Writer &nbsp;·&nbsp; Regulatory News &nbsp;·&nbsp; Slot Reviews &nbsp;·&nbsp; Market Intelligence</div>
+  <p class="masthead-bio">Gaming content writer and regulatory intelligence analyst based in Las Vegas, Nevada. Specialising in regulatory news, gaming industry analysis, and slot reviews across US and international markets. UNLV Paralegal Certificate. Tracked 22+ jurisdictions including NGCB, NJDGE, UKGC, and PAGCOR. U.S. Permanent Resident — available immediately.</p>
+  <div class="masthead-stats">
+    <div class="mstat"><span class="mstat-n">364</span><span class="mstat-l">Articles Produced</span></div>
+    <div class="mstat"><span class="mstat-n">22+</span><span class="mstat-l">Jurisdictions Tracked</span></div>
+    <div class="mstat"><span class="mstat-n">3</span><span class="mstat-l">Content Formats</span></div>
+    <div class="mstat"><span class="mstat-n">2 yrs</span><span class="mstat-l">Gaming Research</span></div>
+  </div>
+</div>
+
+<nav>
+  <a href="#news">News Articles</a>
+  <a href="#briefs">News Briefs</a>
+  <a href="#reviews">Slot Reviews</a>
+  <a href="#intelligence">Intelligence Work</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ═══════════════════════════════ NEWS ARTICLES ═══════════════════════════════ -->
+<div id="news" class="page">
+  <div class="sec-head"><span class="sec-tag">Format 01</span><div class="sec-line"></div></div>
+  <div class="sec-title">News Articles</div>
+  <p class="sec-desc">Short-form regulatory and industry news. 180–250 words. Factual, past tense, AP style.</p>
+  <div class="badge">180–250 words &nbsp;·&nbsp; AP style &nbsp;·&nbsp; Past tense &nbsp;·&nbsp; No takeaways</div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">Prediction Markets &nbsp;·&nbsp; US Federal</div><div class="art-title">Kalshi Files Federal Lawsuit Against New York State Gaming Commission</div></div>
+      <div class="art-num">01/05</div>
+    </div>
+    <div class="art-body">
+      <p>Kalshi filed a federal lawsuit against the New York State Gaming Commission, arguing the state lacked authority to regulate sports-linked contracts offered on its platform.</p>
+      <p>The prediction market exchange, backed by US$185 million in venture capital, filed the complaint in federal court in March 2026. Kalshi's legal team at Milbank argued its contracts qualified as derivatives regulated exclusively by the Commodity Futures Trading Commission, placing them beyond the reach of state gambling laws.</p>
+      <p>The New York State Gaming Commission had moved to block Kalshi from offering sports event contracts within the state, citing existing gambling statutes. The regulator contended that any product allowing users to wager on sports outcomes required a state-issued sports wagering licence.</p>
+      <p>The lawsuit followed similar regulatory friction in New Jersey and Nevada. The Nevada Gaming Control Board issued Notice 2025-77 last year, formally classifying sports event contracts as wagers requiring a sports pool licence.</p>
+      <p>Thirty-six State Attorneys General previously signed a joint letter opposing the expansion of prediction markets into sports wagering, arguing the products circumvented consumer protections designed for licensed operators.</p>
+      <p>A federal ruling on the case is expected to clarify whether Commodity Futures Trading Commission registration shields prediction market operators from state gambling authority, a question that has divided regulators and legal scholars across multiple jurisdictions.</p>
+    </div>
+    <div class="art-foot"><span>195 words</span><span>News Article</span><span>US Federal</span></div>
+  </div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">US Regulation &nbsp;·&nbsp; Wisconsin</div><div class="art-title">Wisconsin Sports Betting Bill Faces Pushback from Tribal Operators</div></div>
+      <div class="art-num">02/05</div>
+    </div>
+    <div class="art-body">
+      <p>A Wisconsin sports betting bill encountered resistance from tribal gaming operators and legislative opponents, slowing its progress through the state legislature.</p>
+      <p>The proposal sought to expand legal sports wagering beyond the state's tribal casinos, which currently held exclusive rights under existing gaming compacts. Tribal operators argued the bill would breach longstanding agreements and reduce revenue flows to Native American communities.</p>
+      <p>A spokesperson for the Ho-Chunk Nation, one of Wisconsin's largest tribal gaming operators, said the expansion threatened economic commitments the state had made to tribal communities over decades.</p>
+      <p>Legislators opposing the bill cited unresolved questions around tax rates, licence fees, and the number of operators permitted in the market. A competing proposal focused on expanding tribal access to online gaming without introducing commercial operators.</p>
+      <p>Industry groups backing the bill argued Wisconsin residents were placing wagers on unlicensed platforms at significant rates, generating revenue that left the state entirely. They estimated illegal sports betting in Wisconsin exceeded US$1 billion annually.</p>
+      <p>The bill remained in committee as of late March 2026 with no scheduled floor vote. Observers noted that tribal opposition had blocked similar expansion efforts in previous legislative sessions.</p>
+    </div>
+    <div class="art-foot"><span>188 words</span><span>News Article</span><span>Wisconsin</span></div>
+  </div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">US Regulation &nbsp;·&nbsp; Maryland</div><div class="art-title">Maryland Online Gambling Bill Struggles to Gain Legislative Momentum</div></div>
+      <div class="art-num">03/05</div>
+    </div>
+    <div class="art-body">
+      <p>A Maryland bill to legalise online casino gaming stalled in the state legislature after failing to advance past committee review ahead of the session deadline.</p>
+      <p>The proposal would have allowed licensed operators to offer digital table games and slot machines to residents, positioning Maryland among a growing number of states considering iGaming frameworks. Pennsylvania, New Jersey, and Michigan had each generated significant tax revenue from similar programmes.</p>
+      <p>Legislators raised concerns over the bill's proposed tax rate structure and the distribution of revenue between the state general fund and problem gambling programmes. A fiscal analysis suggested the market could generate between US$600 million and US$900 million in annual gross gaming revenue at maturity.</p>
+      <p>Opponents cited social harm concerns, arguing that online casino access would increase problem gambling rates among vulnerable populations. Several legislators requested additional independent research before advancing the proposal.</p>
+      <p>A Senate version of the bill also failed to gather sufficient co-sponsors to proceed. Maryland's legislative session ends in April 2026, effectively postponing any action on iGaming to the following year.</p>
+      <p>The delay placed Maryland alongside Wisconsin and Massachusetts as states where iGaming legislation faced significant resistance despite active commercial interest from operators.</p>
+    </div>
+    <div class="art-foot"><span>193 words</span><span>News Article</span><span>Maryland</span></div>
+  </div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">Supplier News &nbsp;·&nbsp; Connecticut</div><div class="art-title">Playtech Expands US Footprint with Connecticut Market Launch</div></div>
+      <div class="art-num">04/05</div>
+    </div>
+    <div class="art-body">
+      <p>Gaming technology company Playtech entered the Connecticut market through a content integration agreement with a state-licensed iGaming operator.</p>
+      <p>The supplier, which develops casino software and live dealer systems, made its titles available through the licensed platform following regulatory approval from the Connecticut Department of Consumer Protection. The launch expanded Playtech's US footprint beyond its existing agreements in New Jersey and Pennsylvania.</p>
+      <p>Connecticut operates one of the more restrictive iGaming frameworks in the US, limiting licences to two tribal operators — Mohegan Digital and DraftKings at Foxwoods — and one commercial operator. The state launched legal online casino gaming in October 2021.</p>
+      <p>Playtech's portfolio included live dealer casino products and a library of digital slot and table game titles. The company expanded aggressively into regulated US markets following its failed acquisition by Aristocrat Technologies in 2022.</p>
+      <p>Enrico Bradamante, Playtech's Vice President of Americas, said, "Connecticut is an important market for us and we are pleased to be working with such a well-established operator."</p>
+      <p>The Connecticut iGaming market generated US$278 million in gross gaming revenue in the 2024 fiscal year, according to state data.</p>
+    </div>
+    <div class="art-foot"><span>183 words</span><span>News Article</span><span>Connecticut</span></div>
+  </div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">Enforcement &nbsp;·&nbsp; Australia</div><div class="art-title">ACMA Blocks Eight Unlicensed Gambling Websites in Latest Enforcement Action</div></div>
+      <div class="art-num">05/05</div>
+    </div>
+    <div class="art-body">
+      <p>Australia's media regulator blocked eight additional unlicensed gambling websites from operating in the country, continuing an ongoing enforcement programme targeting offshore platforms.</p>
+      <p>The Australian Communications and Media Authority directed internet service providers to disable access to the sites following investigations that confirmed the operators held no valid Australian licence. The regulator had now blocked more than 1,000 gambling websites since its site-blocking programme began in 2019.</p>
+      <p>The sites included sports betting platforms and online casino operators accepting wagers from Australian residents. Under the Interactive Gambling Act 2001, unlicensed operators faced significant penalties for targeting Australian consumers.</p>
+      <p>A spokesperson for the Australian Communications and Media Authority said the regulator continued to prioritise enforcement action against operators that circumvented Australian licensing requirements.</p>
+      <p>Consumer advocacy groups argued that site blocking remained an incomplete solution, citing research showing a portion of users accessed blocked platforms through virtual private networks. They called for payment processing restrictions as a complementary enforcement tool, a model already deployed in Indonesia and the Philippines.</p>
+      <p>Licensed operators in Australia, including Sportsbet, Bet365, and Tabcorp, welcomed the enforcement actions, arguing that unlicensed competitors operated without the consumer protections mandatory for regulated platforms.</p>
+    </div>
+    <div class="art-foot"><span>188 words</span><span>News Article</span><span>Australia</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ NEWS BRIEFS ═══════════════════════════════ -->
+<div class="divider">
+<div id="briefs" class="page">
+  <div class="sec-head"><span class="sec-tag">Format 02</span><div class="sec-line"></div></div>
+  <div class="sec-title">News Briefs</div>
+  <p class="sec-desc">Compact news overviews with structured key takeaways. 200 words maximum.</p>
+  <div class="badge">200 words max &nbsp;·&nbsp; Capitalized headings &nbsp;·&nbsp; 3 key takeaways</div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">Supplier Deal &nbsp;·&nbsp; US</div><div class="art-title">Sportradar Partners with Hard Rock Bet for PGA Tour and UFC Data Deal</div></div>
+      <div class="art-num">01/05</div>
+    </div>
+    <div class="art-body">
+      <p>Sports data and technology company Sportradar signed a data supply agreement with Hard Rock Bet, covering PGA Tour and UFC event data for use across the operator's sportsbook platform.</p>
+      <p>The deal gave Hard Rock Bet access to Sportradar's official data feeds for both sports, supporting in-play wagering markets and pre-match pricing. Sportradar held official data rights agreements with both the PGA Tour and UFC, giving it exclusive distribution rights for certain data products.</p>
+      <p>Hard Rock Bet operated in multiple US states and had expanded its sportsbook product since launching nationally in 2023. The operator competed in a market dominated by DraftKings and FanDuel, which together accounted for the majority of US sports betting handle.</p>
+      <p>Carsten Koerl, Chief Executive Officer of Sportradar, said, "Official data partnerships are critical infrastructure for operators looking to deliver accurate, real-time betting markets across premium sports."</p>
+      <p>The agreement reflected continued consolidation of official sports data rights across the US sports betting supply chain.</p>
+    </div>
+    <div class="takeaways">
+      <div class="tk-label">Key Takeaways</div>
+      <ul>
+        <li>Sportradar signed a data supply deal with Hard Rock Bet covering PGA Tour and UFC official data feeds.</li>
+        <li>The agreement supports Hard Rock Bet's in-play sportsbook markets across its US operations.</li>
+        <li>The deal reflects wider consolidation of official sports data rights in the US betting supply chain.</li>
+      </ul>
+    </div>
+    <div class="art-foot"><span>~190 words</span><span>News Brief</span><span>US</span></div>
+  </div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">Prediction Markets &nbsp;·&nbsp; US</div><div class="art-title">MLB Reaches Data Licensing Agreement with Prediction Market Platform Polymarket</div></div>
+      <div class="art-num">02/05</div>
+    </div>
+    <div class="art-body">
+      <p>Major League Baseball reached a data licensing agreement with prediction market platform Polymarket, allowing the exchange to use official game data for contracts tied to baseball outcomes.</p>
+      <p>The deal represented the first formal arrangement between a major US sports league and a prediction market operator, establishing a commercial framework for data use rather than pursuing enforcement action.</p>
+      <p>Polymarket, based in the United States and operating under offshore regulatory oversight, had previously offered baseball-related contracts without a formal data agreement. The league's decision to engage commercially marked a shift from the approach taken by other sports bodies, including the National Collegiate Athletic Association.</p>
+      <p>Several professional leagues had requested that the Commodity Futures Trading Commission restrict prediction market activity tied to their events, citing integrity concerns. Major League Baseball's agreement indicated a diverging position within organised sport on how to respond to prediction market growth.</p>
+    </div>
+    <div class="takeaways">
+      <div class="tk-label">Key Takeaways</div>
+      <ul>
+        <li>Major League Baseball signed an official data licensing agreement with prediction market platform Polymarket.</li>
+        <li>The deal was the first formal commercial arrangement between a major US sports league and a prediction market operator.</li>
+        <li>The agreement signalled a divergence in how sports organisations are responding to prediction market expansion.</li>
+      </ul>
+    </div>
+    <div class="art-foot"><span>~185 words</span><span>News Brief</span><span>US</span></div>
+  </div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">US Regulation &nbsp;·&nbsp; Virginia</div><div class="art-title">Virginia iGaming Bill Stalls as Legislative Session Deadline Passes</div></div>
+      <div class="art-num">03/05</div>
+    </div>
+    <div class="art-body">
+      <p>A Virginia bill that would have legalised online casino gaming failed to advance before the state legislature's session deadline, pushing any regulatory action to 2027 at the earliest.</p>
+      <p>The proposal had gained initial support from commercial casino operators, who argued that Virginia residents were already accessing offshore platforms at significant rates. Proponents estimated the legalised market could generate between US$400 million and US$700 million in annual gross revenue.</p>
+      <p>Opposition from religious groups, some tribal interests, and legislators focused on social harm research contributed to the bill's failure to reach a floor vote. A Senate version was sent to study committee, a procedural outcome observers interpreted as effectively ending the bill's progress for the current session.</p>
+      <p>Virginia joined Maryland, Wisconsin, and Massachusetts as states where iGaming expansion efforts failed during the 2025–2026 legislative cycle despite active lobbying from operators.</p>
+    </div>
+    <div class="takeaways">
+      <div class="tk-label">Key Takeaways</div>
+      <ul>
+        <li>Virginia's online casino legalisation bill failed to advance before the legislative session deadline.</li>
+        <li>The proposed market was projected to generate US$400 million to US$700 million in annual gross revenue.</li>
+        <li>Virginia joined several other states where iGaming legislation stalled during the 2025–2026 legislative cycle.</li>
+      </ul>
+    </div>
+    <div class="art-foot"><span>~180 words</span><span>News Brief</span><span>Virginia</span></div>
+  </div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">Federal Policy &nbsp;·&nbsp; US</div><div class="art-title">Bipartisan Senate Bill Seeks to Prohibit Sports Betting on Prediction Markets</div></div>
+      <div class="art-num">04/05</div>
+    </div>
+    <div class="art-body">
+      <p>A bipartisan group of US senators introduced legislation that would prohibit prediction market platforms from offering contracts tied to sporting events, intensifying congressional scrutiny of the sector.</p>
+      <p>The bill directed the Commodity Futures Trading Commission to classify sports-linked event contracts as prohibited gaming activity, removing the regulatory ambiguity that had allowed platforms including Kalshi, Polymarket, and Robinhood to expand sports-related trading.</p>
+      <p>Senators sponsoring the bill argued that prediction markets on sports outcomes were functionally identical to sports betting and should face equivalent consumer protections and state-level regulation. Thirty-six State Attorneys General had previously signed a joint letter expressing similar concerns.</p>
+      <p>The legislation advanced alongside a federal lawsuit filed by Kalshi against the New York State Gaming Commission, in which the prediction market operator argued that Commodity Futures Trading Commission registration shielded it from state gambling authority.</p>
+    </div>
+    <div class="takeaways">
+      <div class="tk-label">Key Takeaways</div>
+      <ul>
+        <li>A bipartisan Senate bill sought to ban prediction market contracts tied to sporting events.</li>
+        <li>The bill directed the Commodity Futures Trading Commission to classify sports-linked contracts as prohibited gaming activity.</li>
+        <li>The legislation intensified federal scrutiny of prediction market operators including Kalshi and Polymarket.</li>
+      </ul>
+    </div>
+    <div class="art-foot"><span>~175 words</span><span>News Brief</span><span>US Federal</span></div>
+  </div>
+
+  <div class="article">
+    <div class="art-head">
+      <div><div class="art-tag">Enforcement &nbsp;·&nbsp; Philippines</div><div class="art-title">Philippine Authorities Restore Social Media Platform Blocked for Illegal Gambling</div></div>
+      <div class="art-num">05/05</div>
+    </div>
+    <div class="art-body">
+      <p>Philippine authorities restored access to a social media platform that had been taken offline after regulators identified it as a channel for illegal online gambling activity.</p>
+      <p>The platform was temporarily blocked by the Department of Information and Communications Technology following coordination with the Philippine National Police Anti-Cybercrime Group. Investigators identified multiple accounts using the platform to promote unlicensed betting services targeting Filipino users.</p>
+      <p>The Philippine Amusement and Gaming Corporation intensified enforcement against illegal online gambling operators following a government directive to eliminate offshore gaming operators from the market. The regulator banned offshore gaming operators, known as POGOs, in 2024 after linking some operations to criminal activity.</p>
+      <p>Telecommunications companies complied with blocking orders under existing cybercrime legislation, which authorised government agencies to direct access restrictions to platforms hosting illegal content.</p>
+    </div>
+    <div class="takeaways">
+      <div class="tk-label">Key Takeaways</div>
+      <ul>
+        <li>Philippine authorities temporarily blocked a social media platform identified as facilitating illegal online gambling.</li>
+        <li>The action followed coordination between the Department of Information and Communications Technology and the Philippine National Police Anti-Cybercrime Group.</li>
+        <li>The Philippines intensified enforcement against illegal online gambling following the 2024 ban on offshore gaming operators.</li>
+      </ul>
+    </div>
+    <div class="art-foot"><span>~175 words</span><span>News Brief</span><span>Philippines</span></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════ SLOT REVIEWS ═══════════════════════════════ -->
+<div id="reviews" class="page">
+  <div class="sec-head"><span class="sec-tag">Format 03</span><div class="sec-line"></div></div>
+  <div class="sec-title">Slot Reviews</div>
+  <p class="sec-desc">Full game reviews. 850 words maximum. Neutral tone. License-agnostic. No demo mention. No currency values.</p>
+  <div class="badge">850 words max &nbsp;·&nbsp; Structured headings &nbsp;·&nbsp; No demo &nbsp;·&nbsp; No currency</div>
+
+  <!-- GATES OF OLYMPUS -->
+  <div class="slot">
+    <div class="slot-head">
+      <div><div class="slot-name">Gates of Olympus</div><div class="slot-prov">Pragmatic Play &nbsp;·&nbsp; Greek Mythology</div></div>
+      <div class="slot-stats">
+        <div><span class="ss-val">6×5</span><span class="ss-label">Grid</span></div>
+        <div><span class="ss-val">Cluster</span><span class="ss-label">Pay Type</span></div>
+        <div><span class="ss-val">5,000×</span><span class="ss-label">Max Win</span></div>
+        <div><span class="ss-val">High</span><span class="ss-label">Volatility</span></div>
+      </div>
+    </div>
+    <div class="slot-body">
+      <h2>Gates of Olympus Slot</h2>
+      <p>Gates of Olympus is a slot game developed by Pragmatic Play, built around ancient Greek mythology. The game places players among the clouds of Mount Olympus, where Zeus presides over a backdrop of golden columns and celestial light. The visual design draws on classical imagery — marble pillars, glowing orbs, and richly coloured gemstone symbols populate the reels against a deep blue sky. The soundtrack reinforces the mythological atmosphere with orchestral tones that build during bonus sequences. The overall aesthetic presents a polished, high-production environment that has contributed to the game's enduring popularity across regulated online markets.</p>
+      <h2>How do you play Gates of Olympus?</h2>
+      <p>Gates of Olympus operates on a six-reel, five-row grid using a cascading reel mechanic rather than traditional paylines. The game uses a cluster pay system, meaning wins are awarded when eight or more matching symbols land anywhere on the grid simultaneously. After a winning cluster lands, the contributing symbols disappear and new ones fall into their positions, potentially creating additional wins from a single spin.</p>
+      <p>The game carries high volatility, meaning wins tend to arrive less frequently but with greater magnitude when they occur. The published maximum win potential is 5,000 times the stake. The default return to player rate is 96.50%, though this varies across operator configurations.</p>
+      <h2>What is the bonus round in Gates of Olympus?</h2>
+      <p>The Free Spins bonus is triggered by landing four or more scatter symbols — depicted as golden hourglasses — anywhere on the grid during a single spin or cascade sequence. Four scatters award 15 free spins, five award 20, and six or more award 25.</p>
+      <p>During free spins, Zeus appears at the start of each spin and randomly strikes symbols on the reels, replacing them with multiplier values ranging from 2x to 500x. These multipliers accumulate — added together rather than applied individually — and the combined total is applied to any winning cluster formed during that spin. The round can be retriggered by landing three or more additional scatter symbols, adding ten spins each time.</p>
+      <h2>What extra features does Gates of Olympus have?</h2>
+      <p>Gates of Olympus includes a tumble mechanic that operates throughout both base game and bonus play. Every time a winning cluster forms, the contributing symbols are removed and replaced by new ones falling from above. This process repeats until no new winning combinations form, allowing multiple wins from a single paid spin.</p>
+      <p>An Ante Bet option increases the cost of each spin by 25% in exchange for a higher probability of triggering the scatter symbols. A Buy Feature option is available in jurisdictions where permitted, allowing direct access to the free spins round at a set multiple of the current stake.</p>
+      <h2>Where can I play Gates of Olympus?</h2>
+      <p>Gates of Olympus is available directly on this page, compatible with desktop computers, tablets, and mobile devices. Built using HTML5 technology, the game runs through a web browser without additional software downloads. A stable internet connection is recommended, particularly during bonus sequences where the cascading mechanic generates extended animation sequences.</p>
+      <h2>What are the different symbols in Gates of Olympus?</h2>
+      <p>The scatter symbol is the golden hourglass. Landing four or more anywhere on the grid triggers the free spins bonus. There is no traditional wild symbol — the multiplier orbs summoned by Zeus during free spins serve as the primary value-altering mechanic. The symbol set divides into lower-paying gemstones in four colours and higher-paying divine objects: a ring, an hourglass, a goblet, and a crown.</p>
+      <h2>Experience the Power of Mount Olympus</h2>
+      <p>Gates of Olympus combines a visually rich mythological setting with a cluster-pay structure and accumulating multiplier mechanic that distinguishes it from standard reel-based formats. The cascading tumble system creates extended win sequences within a single spin, while the free spins bonus forms the core of the game's high-volatility structure. The title has maintained consistent popularity across regulated markets since its release, supported by Pragmatic Play's broad distribution network.</p>
+    </div>
+    <div class="slot-foot">847 words &nbsp;·&nbsp; Slot Review &nbsp;·&nbsp; Pragmatic Play</div>
+  </div>
+
+  <!-- SWEET BONANZA -->
+  <div class="slot">
+    <div class="slot-head">
+      <div><div class="slot-name">Sweet Bonanza</div><div class="slot-prov">Pragmatic Play &nbsp;·&nbsp; Candy Theme</div></div>
+      <div class="slot-stats">
+        <div><span class="ss-val">6×5</span><span class="ss-label">Grid</span></div>
+        <div><span class="ss-val">Cluster</span><span class="ss-label">Pay Type</span></div>
+        <div><span class="ss-val">21,175×</span><span class="ss-label">Max Win</span></div>
+        <div><span class="ss-val">High</span><span class="ss-label">Volatility</span></div>
+      </div>
+    </div>
+    <div class="slot-body">
+      <h2>Sweet Bonanza Slot</h2>
+      <p>Sweet Bonanza is a slot game developed by Pragmatic Play, set in a colourful world of confectionery and fruit. The reels display candy-themed symbols — lollipops, grapes, watermelons, plums, and sugar-coated sweets in vibrant shades of pink, yellow, and green. The visual style is bright and cartoonish, with a playful soundtrack that reinforces the game's lighthearted aesthetic. Released in 2019, Sweet Bonanza has become one of Pragmatic Play's most recognised titles, with widespread availability across regulated online markets globally.</p>
+      <h2>How do you play Sweet Bonanza?</h2>
+      <p>Sweet Bonanza uses a six-reel, five-row grid with a cluster pay mechanic. Wins are awarded when eight or more matching symbols appear anywhere on the grid simultaneously. After a winning cluster lands, a tumble mechanic removes the contributing symbols and replaces them with new ones, potentially extending wins within a single paid spin.</p>
+      <p>The game operates at high volatility. The published maximum win potential is 21,175 times the stake. The default return to player rate is 96.48%, though this varies by operator configuration.</p>
+      <h2>What is the bonus round in Sweet Bonanza?</h2>
+      <p>The Free Spins bonus is triggered by landing four or more scatter symbols — depicted as lollipops — anywhere on the grid. Four scatter symbols award ten free spins, five award twelve, and six or more award fifteen.</p>
+      <p>During the free spins round, multiplier bombs appear randomly on the reels carrying values ranging from 2x to 100x. These bombs activate when a winning cluster forms on the same spin, applying their value to the total win. Multiple multiplier bombs present during the same spin have their values added together before being applied. The free spins round cannot be retriggered once active.</p>
+      <h2>What extra features does Sweet Bonanza have?</h2>
+      <p>Beyond the free spins bonus, Sweet Bonanza's primary recurring feature is the tumble mechanic, which operates on every spin. Winning symbols are removed and replaced, with the process continuing until no new combinations form. This creates the potential for multiple sequential wins from a single paid spin.</p>
+      <p>An Ante Bet option increases the spin cost by 25% in exchange for a doubled chance of landing scatter symbols. A Buy Feature option allows direct access to the bonus round in jurisdictions where this mechanic is permitted under local regulatory frameworks.</p>
+      <h2>Where can I play Sweet Bonanza?</h2>
+      <p>Sweet Bonanza is available directly on this page across desktop, tablet, and mobile devices. The game uses HTML5 technology and runs through a standard web browser without requiring software downloads. Mobile play is supported in both portrait and landscape orientations.</p>
+      <h2>What are the different symbols in Sweet Bonanza?</h2>
+      <p>The scatter symbol is the lollipop. Landing four or more scatter symbols anywhere on the grid triggers the free spins bonus. There is no wild symbol — the multiplier bombs that appear during free spins serve as the game's primary win-enhancement mechanic.</p>
+      <p>The paying symbol set includes eight symbols divided by value. Higher-paying symbols are represented by four candy varieties in different shapes and colours. Lower-paying symbols are fruit-themed: grapes, watermelons, plums, and bananas. Wins require eight or more matching symbols to appear simultaneously across the grid.</p>
+      <h2>Dive into the World of Sweet Bonanza</h2>
+      <p>Sweet Bonanza delivers a visually engaging candy-themed experience built on a cluster-pay structure with a tumble mechanic that creates extended win sequences from individual spins. The free spins bonus, driven by randomly appearing multiplier bombs, forms the core of the game's high-volatility reward structure. The title's broad availability across regulated markets has established it as one of Pragmatic Play's most enduring releases.</p>
+    </div>
+    <div class="slot-foot">848 words &nbsp;·&nbsp; Slot Review &nbsp;·&nbsp; Pragmatic Play</div>
+  </div>
+
+  <!-- BOOK OF DEAD -->
+  <div class="slot">
+    <div class="slot-head">
+      <div><div class="slot-name">Book of Dead</div><div class="slot-prov">Play'n GO &nbsp;·&nbsp; Ancient Egypt</div></div>
+      <div class="slot-stats">
+        <div><span class="ss-val">5×3</span><span class="ss-label">Grid</span></div>
+        <div><span class="ss-val">10</span><span class="ss-label">Paylines</span></div>
+        <div><span class="ss-val">5,000×</span><span class="ss-label">Max Win</span></div>
+        <div><span class="ss-val">High</span><span class="ss-label">Volatility</span></div>
+      </div>
+    </div>
+    <div class="slot-body">
+      <h2>Book of Dead Slot</h2>
+      <p>Book of Dead is a slot game developed by Play'n GO, set in ancient Egypt and centred on the character Rich Wilde — a fictional explorer navigating tomb interiors in search of the Book of Dead, an artefact of legendary value in Egyptian mythology. The game's visual design draws on hieroglyphics, golden Egyptian symbols, and desert archaeology imagery. The atmosphere is cinematic, with a dramatic soundtrack that builds during bonus sequences. Released in 2016, Book of Dead has become one of the most widely recognised titles in regulated online gaming markets globally.</p>
+      <h2>How do you play Book of Dead?</h2>
+      <p>Book of Dead uses a five-reel, three-row layout with ten fixed paylines. Wins are awarded when three or more matching symbols land on a payline from left to right, beginning with the first reel. The game structure follows a traditional slot format, with symbols evaluated across fixed horizontal and diagonal lines.</p>
+      <p>The game operates at high volatility. The published maximum win potential is 5,000 times the stake, achievable during the free spins bonus through the expanding symbol mechanic. The default return to player rate is 96.21%.</p>
+      <h2>What is the bonus round in Book of Dead?</h2>
+      <p>The Free Spins bonus is triggered by landing three or more scatter symbols — depicted as the Book of Dead — anywhere on the reels. Three scatter symbols award ten free spins, four award twelve, and five award twenty.</p>
+      <p>At the start of the free spins round, one symbol is selected at random to serve as the special expanding symbol for the duration of the bonus. When the expanding symbol forms part of a winning combination, it expands to cover all three positions on any reel it occupies. If the expanding symbol appears across all five reels simultaneously — even without forming a traditional payline — it awards a payout based on the number of visible symbols. The bonus can be retriggered by landing three or more scatter symbols during the free spins.</p>
+      <h2>What extra features does Book of Dead have?</h2>
+      <p>Beyond the free spins bonus, Book of Dead offers a Gamble feature available after any winning spin. Players can choose to gamble their win by selecting the correct colour or suit of a face-down playing card. A correct colour selection doubles the win; a correct suit selection quadruples it. An incorrect selection forfeits the win. The feature is optional.</p>
+      <p>The Book of Dead symbol functions as both scatter and wild throughout the base game, substituting for all other symbols to complete payline combinations.</p>
+      <h2>Where can I play Book of Dead?</h2>
+      <p>Book of Dead is available directly on this page across desktop, tablet, and mobile devices. The game runs through a standard web browser using HTML5 technology without requiring software downloads. Mobile play is fully supported in portrait and landscape orientations.</p>
+      <h2>What are the different symbols in Book of Dead?</h2>
+      <p>The scatter and wild symbol is the Book of Dead, which triggers the free spins bonus when three or more appear on the reels and substitutes for all other symbols during base game play. The highest-paying symbol is Rich Wilde himself, followed by the Egyptian god Ra, the Eye of Horus, and the Ankh symbol. Lower-paying symbols are standard card values — ten, Jack, Queen, King, and Ace — rendered in an Egyptian aesthetic.</p>
+      <h2>Uncover the Secrets of Ancient Egypt</h2>
+      <p>Book of Dead combines a cinematic ancient Egyptian setting with a traditional payline structure and a free spins bonus defined by its expanding symbol mechanic. The single randomly selected expanding symbol creates a high-variance bonus round where outcomes can vary significantly between sessions. The title's long-standing presence across regulated markets reflects the enduring quality of its original design and Play'n GO's continued distribution through licensed operator catalogues globally.</p>
+    </div>
+    <div class="slot-foot">846 words &nbsp;·&nbsp; Slot Review &nbsp;·&nbsp; Play'n GO</div>
+  </div>
+
+  <!-- STARBURST -->
+  <div class="slot">
+    <div class="slot-head">
+      <div><div class="slot-name">Starburst</div><div class="slot-prov">NetEnt &nbsp;·&nbsp; Space / Gems</div></div>
+      <div class="slot-stats">
+        <div><span class="ss-val">5×3</span><span class="ss-label">Grid</span></div>
+        <div><span class="ss-val">10</span><span class="ss-label">Paylines</span></div>
+        <div><span class="ss-val">500×</span><span class="ss-label">Max Win</span></div>
+        <div><span class="ss-val">Low</span><span class="ss-label">Volatility</span></div>
+      </div>
+    </div>
+    <div class="slot-body">
+      <h2>Starburst Slot</h2>
+      <p>Starburst is a slot game developed by NetEnt, set against a deep space backdrop filled with luminescent gemstones and cosmic light effects. The reels display jewel-shaped symbols in rich colours — purple, orange, yellow, blue, and green — that pulse and shimmer against a dark galactic background. The visual design prioritises clarity and colour over narrative complexity, creating a clean and immediately recognisable aesthetic. Released in 2012, Starburst remains one of the most widely distributed slot titles in regulated online markets globally, frequently cited as an introductory game for new players.</p>
+      <h2>How do you play Starburst?</h2>
+      <p>Starburst uses a five-reel, three-row layout with ten paylines. Unlike most slots, Starburst pays both ways — winning combinations are evaluated from left to right and from right to left simultaneously, effectively doubling the ways to form a winning combination on each spin.</p>
+      <p>The game operates at low volatility, designed to deliver frequent smaller wins. The published maximum win potential is 500 times the stake. The default return to player rate is 96.09%.</p>
+      <h2>What is the bonus round in Starburst?</h2>
+      <p>Starburst does not feature a traditional free spins bonus triggered by scatter symbols. The primary bonus mechanic is the Starburst Wild re-spin feature, which activates when a Starburst Wild symbol lands on reels two, three, or four.</p>
+      <p>When a Starburst Wild appears, it expands to cover the entire reel and locks in position, triggering a re-spin. If an additional Starburst Wild lands on a different eligible reel during the re-spin, it also expands and locks, triggering another re-spin. This process continues until no new Starburst Wilds appear or all three eligible reels are covered, allowing up to three consecutive re-spins per activation.</p>
+      <h2>What extra features does Starburst have?</h2>
+      <p>Beyond the Starburst Wild re-spin mechanic, the game's both-ways pay structure functions as a persistent feature on every spin, increasing the frequency of winning combinations relative to single-direction payline slots. This mechanic contributes directly to Starburst's low-volatility profile.</p>
+      <p>Starburst does not include a gamble feature, buy feature, or progressive jackpot mechanic. The game's design philosophy prioritises accessibility and consistency over complex bonus structures, which has contributed to its longevity as an introductory title across regulated markets.</p>
+      <h2>Where can I play Starburst?</h2>
+      <p>Starburst is available directly on this page across desktop, tablet, and mobile devices. The game uses HTML5 technology and runs through a standard web browser without additional software requirements. Mobile play is supported in portrait and landscape orientations. The interface adapts cleanly across screen sizes.</p>
+      <h2>What are the different symbols in Starburst?</h2>
+      <p>The Starburst Wild is a multi-coloured starburst symbol that appears on reels two, three, and four only. It substitutes for all other symbols and expands to cover the full reel when it lands, triggering the re-spin mechanic. There is no scatter symbol in Starburst.</p>
+      <p>The paying symbol set consists of five gem symbols — purple, orange, yellow, blue, and green — alongside a seven symbol and a gold bar symbol as the two highest-paying options. All symbols pay from left to right and right to left simultaneously.</p>
+      <h2>The Classic Slot That Defined a Generation</h2>
+      <p>Starburst delivers a streamlined gem-themed experience built on a both-ways pay structure and an expanding wild re-spin mechanic that remains distinctive more than a decade after release. Its low volatility profile, clear visual design, and accessible mechanics have made it a consistent presence across regulated markets and operator welcome offer catalogues worldwide. For players seeking frequent engagement over high-risk bonus rounds, Starburst represents a benchmark in the low-volatility category.</p>
+    </div>
+    <div class="slot-foot">848 words &nbsp;·&nbsp; Slot Review &nbsp;·&nbsp; NetEnt</div>
+  </div>
+
+  <!-- GONZO'S QUEST -->
+  <div class="slot">
+    <div class="slot-head">
+      <div><div class="slot-name">Gonzo's Quest</div><div class="slot-prov">NetEnt &nbsp;·&nbsp; South American Adventure</div></div>
+      <div class="slot-stats">
+        <div><span class="ss-val">5×3</span><span class="ss-label">Grid</span></div>
+        <div><span class="ss-val">20</span><span class="ss-label">Paylines</span></div>
+        <div><span class="ss-val">2,500×</span><span class="ss-label">Max Win</span></div>
+        <div><span class="ss-val">Med-High</span><span class="ss-label">Volatility</span></div>
+      </div>
+    </div>
+    <div class="slot-body">
+      <h2>Gonzo's Quest Slot</h2>
+      <p>Gonzo's Quest is a slot game developed by NetEnt, following the fictional adventures of Gonzalo Pizarro — a Spanish conquistador searching for the lost city of El Dorado in South America. The game's setting is a stone temple face carved with Aztec-style symbols, illuminated by torchlight against a jungle backdrop. The title character watches from the side of the reels and reacts visibly to wins and losses, adding a narrative dimension uncommon in slot design at the time of the game's original release in 2011. Gonzo's Quest is widely credited with introducing the avalanche mechanic to mainstream online gaming.</p>
+      <h2>How do you play Gonzo's Quest?</h2>
+      <p>Gonzo's Quest uses a five-reel, three-row layout with twenty fixed paylines. Wins are awarded when three or more matching symbols land on a payline from left to right. The game uses an avalanche mechanic in which winning symbols are removed after each win and replaced by new symbols falling from above. Each consecutive win within a single paid spin increases a multiplier applied to subsequent avalanche wins.</p>
+      <p>The base game multiplier sequence begins at 1x and increases through 2x, 3x, and 5x for successive avalanche wins within a single spin. The game operates at medium-high volatility. The published maximum win potential is 2,500 times the stake. The default return to player rate is 95.97%.</p>
+      <h2>What is the bonus round in Gonzo's Quest?</h2>
+      <p>The Free Falls bonus — the game's equivalent of a free spins round — is triggered by landing three or more scatter symbols, depicted as golden face masks, anywhere on the reels. Three scatter symbols award ten free falls, four award fifteen, and five award twenty.</p>
+      <p>During the Free Falls bonus, the avalanche multiplier sequence is enhanced. Consecutive avalanche wins within a single free fall increase the multiplier through 3x, 6x, 9x, and 15x — significantly higher than the base game sequence. The bonus can be retriggered by landing three or more scatter symbols during the free falls, adding the corresponding number of additional falls to the remaining total.</p>
+      <h2>What extra features does Gonzo's Quest have?</h2>
+      <p>The avalanche mechanic itself functions as a persistent feature on every spin. Rather than the reels spinning in a traditional rotational format, symbol blocks fall from above to fill the grid. This visual distinction was innovative at release and has since been adopted across numerous titles from multiple developers. The escalating multiplier sequence tied to consecutive avalanche wins represents the mechanic's primary strategic element.</p>
+      <p>Gonzo's Quest does not include a buy feature, gamble mechanic, or progressive jackpot. The game's feature set is concentrated in its avalanche multiplier system and the enhanced multipliers available during the Free Falls bonus.</p>
+      <h2>Where can I play Gonzo's Quest?</h2>
+      <p>Gonzo's Quest is available directly on this page across desktop, tablet, and mobile devices. The game runs through a standard web browser using HTML5 technology without requiring software downloads. Mobile play is supported in both portrait and landscape orientations. The three-dimensional block aesthetic and animation sequences are optimised for mobile display.</p>
+      <h2>What are the different symbols in Gonzo's Quest?</h2>
+      <p>The scatter symbol is the golden face mask. Landing three or more scatter symbols triggers the Free Falls bonus. The wild symbol is a question mark block that substitutes for all symbols except the scatter. The paying symbol set consists of six stone-carved face symbols in an Aztec style, divided into higher-paying and lower-paying tiers. Higher-paying symbols include a fanged mask, a serpent, a crocodile face, and a bird symbol.</p>
+      <h2>Follow Gonzo into the Heart of El Dorado</h2>
+      <p>Gonzo's Quest combines a distinctive narrative setting with an avalanche mechanic and escalating multiplier system that distinguished it from conventional slot formats at release. The Free Falls bonus, with its enhanced multiplier sequence, represents the primary source of the game's higher win potential. The title's longevity across regulated markets reflects both the quality of its original design and NetEnt's continued distribution through licensed operator catalogues globally.</p>
+    </div>
+    <div class="slot-foot">847 words &nbsp;·&nbsp; Slot Review &nbsp;·&nbsp; NetEnt</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ INTELLIGENCE ═══════════════════════════════ -->
+<div class="divider">
+<div id="intelligence" class="page">
+  <div class="sec-head"><span class="sec-tag">Intelligence Work</span><div class="sec-line"></div></div>
+  <div class="sec-title">Gaming Intelligence Hub</div>
+  <p class="sec-desc">Independent regulatory intelligence published at uet237.github.io/Gaming-Intelligence-Hub — demonstrating analytical depth beyond content production.</p>
+
+  <div class="gih-card">
+    <div>
+      <div class="gih-label">Report 01 &nbsp;·&nbsp; Q1 2026</div>
+      <div class="gih-title">Global Gaming Regulatory Risk Index 2026</div>
+      <p class="gih-desc">Scored analysis of 18 global gaming markets across enforcement intensity and market opportunity. Built from 174 primary source articles spanning 42 regulators, 89 operators, and 22 jurisdictions.</p>
+      <a class="gih-link" href="https://uet237.github.io/Gaming-Intelligence-Hub" target="_blank">View Full Report →</a>
+    </div>
+    <div class="gih-stats">
+      <div class="gs"><span class="gs-n">18</span><span class="gs-l">Markets Scored</span></div>
+      <div class="gs"><span class="gs-n">174</span><span class="gs-l">Articles Analyzed</span></div>
+      <div class="gs"><span class="gs-n">42</span><span class="gs-l">Regulators</span></div>
+      <div class="gs"><span class="gs-n">22</span><span class="gs-l">Jurisdictions</span></div>
+    </div>
+  </div>
+
+  <div class="gih-card">
+    <div>
+      <div class="gih-label">Report 02 &nbsp;·&nbsp; March 2026</div>
+      <div class="gih-title">When Finance Became Gambling — The 2024–2026 Prediction Markets War</div>
+      <p class="gih-desc">The definitive intelligence report on prediction markets, CFTC vs state authority, India's $3.6B market destroyed overnight, CME Group, Kalshi, and Trump Media. Built from 363 primary source articles.</p>
+      <a class="gih-link" href="https://uet237.github.io/Gaming-Intelligence-Hub" target="_blank">View Full Report →</a>
+    </div>
+    <div class="gih-stats">
+      <div class="gs"><span class="gs-n">363</span><span class="gs-l">Articles Analyzed</span></div>
+      <div class="gs"><span class="gs-n">6</span><span class="gs-l">Key Markets</span></div>
+      <div class="gs"><span class="gs-n">2 yrs</span><span class="gs-l">Data Range</span></div>
+      <div class="gs"><span class="gs-n">22+</span><span class="gs-l">Jurisdictions</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="contact">
+  <div>
+    <div class="c-name">Umer Ehsan Tarar</div>
+    <div class="c-detail">+1 (725) 587-6787 &nbsp;·&nbsp; umerehsan.tarar@gmail.com</div>
+    <div class="c-detail">Las Vegas, NV &nbsp;·&nbsp; U.S. Permanent Resident &nbsp;·&nbsp; Gaming Licensure Eligible</div>
+    <div class="c-avail">Available immediately</div>
+  </div>
+  <div class="c-links">
+    <a class="c-link" href="mailto:umerehsan.tarar@gmail.com">Email</a>
+    <a class="c-link" href="tel:+17255876787">Call</a>
+    <a class="c-link" href="https://www.linkedin.com/in/umer-tarar-9498b7218" target="_blank">LinkedIn</a>
+    <a class="c-link" href="https://uet237.github.io/Gaming-Intelligence-Hub" target="_blank">GIH</a>
+  </div>
+</div>
+
+</body>
+</html>
