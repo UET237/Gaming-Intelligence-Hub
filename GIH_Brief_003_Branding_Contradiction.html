@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GIH Intelligence Brief — The Branding Contradiction</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f7f4ee;--paper2:#eeebe3;--ink:#0f0d0a;--ink2:#2a2520;--muted:#6b6155;--rule:#d8d0c2;--gold:#8b6508;--red:#7a1a1a;--red-bg:#fdf2f2;--blue:#1a3a6b;--blue-bg:#f0f4fb;--green:#1a5232;--green-bg:#f0faf4;--amber:#7a4f08;--amber-bg:#fdf8ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Source Sans 3',sans-serif;background:var(--paper);color:var(--ink);font-size:14px;line-height:1.75}
+.report-header{background:var(--ink)}
+.header-top{border-bottom:1px solid #2a2520;padding:10px 64px;display:flex;justify-content:space-between;align-items:center;font-family:'Source Code Pro',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#5a5048}
+.header-pub{color:var(--gold);font-weight:500}
+.header-main{padding:48px 64px 44px}
+.report-class{font-family:'Source Code Pro',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.report-class::before,.report-class::after{content:'';width:40px;height:1px;background:var(--gold);opacity:.4}
+.report-title{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:#f5f1eb;line-height:1.05;max-width:820px;margin-bottom:20px;letter-spacing:-.02em}
+.report-title em{font-style:italic;color:var(--gold)}
+.report-deck{font-size:15px;color:#a09080;max-width:660px;font-weight:300;line-height:1.65;margin-bottom:36px}
+.report-meta{display:flex;gap:0;border-top:1px solid #2a2520;padding-top:16px;flex-wrap:wrap}
+.rmeta{padding-right:32px;margin-right:32px;border-right:1px solid #2a2520}
+.rmeta:last-child{border-right:none}
+.rmeta-label{font-family:'Source Code Pro',monospace;font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#5a5048;margin-bottom:2px}
+.rmeta-val{font-size:12px;color:#a09080}
+.rq-box{background:var(--ink2);border-left:4px solid var(--gold);padding:28px 36px}
+.rq-label{font-family:'Source Code Pro',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.rq-text{font-family:'Playfair Display',serif;font-size:1.25rem;color:#f5f1eb;line-height:1.5;font-style:italic}
+.page{max-width:960px;margin:0 auto;padding:56px 64px}
+.sec-rule{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.sec-num{font-family:'Source Code Pro',monospace;font-size:8px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.sec-line{flex:1;height:1px;background:var(--rule)}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.2}
+.sec-sub{color:var(--muted);font-size:12px;margin-bottom:28px}
+.body{font-size:14px;line-height:1.85;color:var(--ink2);max-width:760px}
+.body p{margin-bottom:16px}
+.body p:last-child{margin-bottom:0}
+.evidence{background:var(--paper2);border:1px solid var(--rule);border-left:3px solid var(--gold);padding:18px 22px;margin:20px 0}
+.ev-label{font-family:'Source Code Pro',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.ev-text{font-size:13px;line-height:1.75;color:var(--ink2)}
+.ev-source{font-family:'Source Code Pro',monospace;font-size:9px;color:var(--muted);margin-top:8px;letter-spacing:.05em}
+.pullquote{border-left:3px solid var(--ink);padding:12px 20px;margin:20px 0;background:var(--paper2)}
+.pullquote p{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:var(--ink);line-height:1.6;margin:0 0 6px}
+.pullquote cite{font-size:11px;color:var(--muted);font-style:normal;font-family:'Source Code Pro',monospace;letter-spacing:.05em}
+.finding-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:24px 0}
+.finding-card{background:var(--paper);padding:22px 20px}
+.finding-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1;margin-bottom:6px}
+.finding-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.finding-desc{font-size:11px;color:var(--muted);line-height:1.5}
+.tl-item{display:grid;grid-template-columns:80px 20px 1fr;gap:0 16px;margin-bottom:0}
+.tl-date{font-family:'Source Code Pro',monospace;font-size:9px;letter-spacing:.1em;color:var(--muted);text-align:right;padding-top:3px}
+.tl-connector{display:flex;flex-direction:column;align-items:center}
+.tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.tl-line{flex:1;width:1px;background:var(--rule);min-height:24px}
+.tl-body{padding-bottom:20px}
+.tl-head{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3}
+.tl-text{font-size:12px;color:var(--muted);line-height:1.55}
+.assessment{background:var(--ink);padding:40px 48px}
+.assessment-label{font-family:'Source Code Pro',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.assessment-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#f5f1eb;line-height:1.3;margin-bottom:20px}
+.assessment-body{font-size:14px;color:#b0a090;line-height:1.8;max-width:720px}
+.assessment-body p{margin-bottom:14px}
+.assessment-body strong{color:#f5f1eb;font-weight:600}
+.verdict-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2a2520;margin-top:28px}
+.verdict-item{background:#1a1612;padding:20px 18px}
+.verdict-label{font-family:'Source Code Pro',monospace;font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.verdict-text{font-size:12px;color:#9a8878;line-height:1.6}
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+.method-card{background:var(--paper2);border:1px solid var(--rule);padding:16px 18px}
+.method-label{font-family:'Source Code Pro',monospace;font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.method-val{font-size:13px;color:var(--ink);line-height:1.5}
+.limitation{background:var(--amber-bg);border:1px solid #e8d8b0;border-left:3px solid var(--amber);padding:14px 18px;margin:8px 0}
+.limitation-text{font-size:12px;color:var(--ink2);line-height:1.6}
+.source-item{display:grid;grid-template-columns:28px 1fr;gap:8px;margin-bottom:10px;align-items:start}
+.source-num{font-family:'Source Code Pro',monospace;font-size:9px;color:var(--gold);padding-top:2px;font-weight:500}
+.source-text{font-size:12px;color:var(--ink2);line-height:1.55}
+.source-type{display:inline-block;font-family:'Source Code Pro',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:1px 5px;border:1px solid var(--rule);color:var(--muted);margin-left:6px;vertical-align:middle}
+footer{background:var(--ink2);padding:24px 64px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-brand{font-family:'Source Code Pro',monospace;font-size:9px;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}
+.footer-right{font-family:'Source Code Pro',monospace;font-size:9px;color:#5a5048;letter-spacing:.08em;text-align:right;line-height:1.6}
+.footer-disc{width:100%;font-size:10px;color:#5a5048;line-height:1.6;border-top:1px solid #2a2520;padding-top:14px;margin-top:8px}
+@media(max-width:768px){.header-main,.page,footer{padding-left:24px;padding-right:24px}.report-title{font-size:2rem}.finding-grid,.verdict-grid,.method-grid{grid-template-columns:1fr}.header-top{padding:10px 24px;flex-direction:column;gap:4px}}
+</style>
+</head>
+<body>
+
+<div class="report-header">
+  <div class="header-top">
+    <span class="header-pub">Gaming Intelligence Hub — Las Vegas</span>
+    <span>Brief No. 003 &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; Open Source Intelligence</span>
+  </div>
+  <div class="header-main">
+    <div class="report-class">Intelligence Brief</div>
+    <h1 class="report-title">The <em>Branding</em> Contradiction — How Prediction Markets Say One Thing and Do Another</h1>
+    <p class="report-deck">An open-source intelligence analysis of the gap between Kalshi's public identity as a financial platform and the operational, commercial, and regulatory evidence that consistently points in a different direction. Derived from 45 primary source articles published between September 2024 and March 2026.</p>
+    <div class="report-meta">
+      <div class="rmeta"><div class="rmeta-label">Dataset</div><div class="rmeta-val">45 primary source articles</div></div>
+      <div class="rmeta"><div class="rmeta-label">Collection Period</div><div class="rmeta-val">Sep 2024 — Mar 2026</div></div>
+      <div class="rmeta"><div class="rmeta-label">Primary Subject</div><div class="rmeta-val">Kalshi / US Prediction Markets</div></div>
+      <div class="rmeta"><div class="rmeta-label">Classification</div><div class="rmeta-val">Open Source — Public Data</div></div>
+      <div class="rmeta"><div class="rmeta-label">Analyst</div><div class="rmeta-val">Gaming Intelligence Hub</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="rq-box">
+  <div class="rq-label">Central Research Question</div>
+  <div class="rq-text">"If prediction markets are financial instruments and not gambling products — why does the operational, commercial, and legal evidence consistently suggest otherwise?"</div>
+</div>
+
+<!-- METHODOLOGY -->
+<div class="page" style="padding-bottom:0">
+  <div class="sec-rule"><span class="sec-num">Methodology</span><div class="sec-line"></div></div>
+  <div class="sec-title">Data Collection &amp; Analytical Framework</div>
+  <p class="sec-sub">This brief is derived entirely from publicly available primary source reporting. No proprietary data, insider information, or non-public documents were used.</p>
+  <div class="method-grid">
+    <div class="method-card">
+      <div class="method-label">Dataset Type</div>
+      <div class="method-val">Open-source intelligence (OSINT) — published news articles, company statements, court filings, regulatory notices, and earnings call transcripts reported by trade and financial press.</div>
+    </div>
+    <div class="method-card">
+      <div class="method-label">Source Outlets</div>
+      <div class="method-val">Sportico, Bloomberg, Front Office Sports, Reuters, iGaming Business, GamblingInsider, CDC Gaming Reports, and company press releases. All sources are publicly accessible.</div>
+    </div>
+    <div class="method-card">
+      <div class="method-label">Analytical Method</div>
+      <div class="method-val">Behavioral contradiction analysis — cross-referencing public identity claims against operational decisions, commercial partnerships, regulatory filings, and legal arguments made simultaneously by the same entities.</div>
+    </div>
+  </div>
+  <div class="body" style="margin-top:8px">
+    <p>Articles were collected as part of an independently maintained gaming regulatory intelligence dataset covering 22 jurisdictions from September 2024 through March 2026. The 45 articles comprising the prediction markets vertical were selected on the basis of direct coverage of US prediction market operators, their regulatory interactions, legal proceedings, commercial activities, and financial developments.</p>
+    <p>Quotations reproduced in this brief are drawn verbatim from source articles as reported. Where a quotation is attributed to a third-party publication — for example, Bloomberg or Sportico — that attribution is preserved in the citation.</p>
+  </div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="page" style="padding-top:32px;padding-bottom:0">
+  <div class="sec-rule"><span class="sec-num">Executive Summary</span><div class="sec-line"></div></div>
+  <div class="sec-title">The Contradiction in Brief</div>
+  <div class="finding-grid">
+    <div class="finding-card">
+      <div class="finding-num" style="color:var(--red)">2</div>
+      <div class="finding-label" style="color:var(--red)">Federal Lawsuits Filed</div>
+      <div class="finding-desc">Kalshi sued the New York State Gaming Commission. Polymarket sued the Massachusetts Attorney General. Both argue CFTC registration makes them financial instruments beyond state gambling authority.</div>
+    </div>
+    <div class="finding-card">
+      <div class="finding-num" style="color:var(--ink)">36</div>
+      <div class="finding-label">State AGs Opposed</div>
+      <div class="finding-desc">Thirty-six bipartisan State Attorneys General filed an amicus brief opposing Kalshi in federal court — the broadest coalition of state-level opposition to any single gaming-adjacent platform on record.</div>
+    </div>
+    <div class="finding-card">
+      <div class="finding-num" style="color:var(--gold)">$185M</div>
+      <div class="finding-label" style="color:var(--gold)">Capital Raised — Kalshi</div>
+      <div class="finding-desc">Led by Paradigm with participation from Sequoia, Citadel Securities, and Multicoin. Valuation reached $2 billion at closing — later reported at $5 billion. Investor conviction that federal preemption holds.</div>
+    </div>
+    <div class="finding-card">
+      <div class="finding-num" style="color:var(--blue)">$1B+</div>
+      <div class="finding-label" style="color:var(--blue)">Super Bowl Volume</div>
+      <div class="finding-desc">Kalshi recorded more than US$1 billion in trading volume on a single sports event — a 2,700% year-over-year increase. Volume figures indistinguishable from a large-scale sportsbook operation.</div>
+    </div>
+  </div>
+  <div class="body">
+    <p>The central finding of this brief is not that prediction markets are gambling products. That question is before the federal courts. The central finding is that Kalshi and its peers systematically present a public identity — federally regulated financial instruments — while making operational, commercial, and strategic decisions that are structurally identical to those made by licensed gambling operators.</p>
+    <p>This contradiction is documented, recurring, and in several instances was corrected only after public exposure. The pattern, taken in aggregate, constitutes a coherent intelligence picture that warrants scrutiny independent of the legal outcome.</p>
+  </div>
+</div>
+
+<!-- FINDING 1 -->
+<div class="page" style="padding-bottom:0;padding-top:40px">
+  <div class="sec-rule"><span class="sec-num">Finding 01</span><div class="sec-line"></div></div>
+  <div class="sec-title">The Public Identity Claim</div>
+  <p class="sec-sub">What prediction market operators say they are — and the regulatory argument that supports it.</p>
+  <div class="body">
+    <p>Kalshi's legal and public positioning rests on a single foundational argument: that its contracts are derivatives regulated exclusively by the Commodity Futures Trading Commission under the Commodity Exchange Act, and that CFTC jurisdiction preempts state gambling authority entirely. This is not a rhetorical position — it is the legal basis for both of Kalshi's active federal lawsuits.</p>
+    <p>In its filing against the New York State Gaming Commission, Kalshi argued its operations fall under federal financial regulation, not gambling law, as the company offers event-based futures contracts on a CFTC-registered exchange. Polymarket made an identical argument in its complaint against the Massachusetts Attorney General, describing its contracts as "federally permitted financial instruments rather than sports wagering."</p>
+  </div>
+  <div class="evidence">
+    <div class="ev-label">Primary Evidence — Filed Legal Position</div>
+    <div class="ev-text">Kalshi filed suit against the New York State Gaming Commission, challenging what it described as a "state-level crackdown on its sports-related trading products." The filing argued CFTC registration placed its contracts beyond state gambling authority. Polymarket filed a separate complaint in the US District Court for the District of Massachusetts, arguing federal oversight preempts state-level gambling enforcement.</div>
+    <div class="ev-source">Sources [1][2] — Kalshi sues New York regulators; Polymarket Sues Massachusetts to Block State Shutdown</div>
+  </div>
+  <div class="evidence">
+    <div class="ev-label">Industry Coalition — Formal Public Position</div>
+    <div class="ev-text">Kalshi and Crypto.com convened the Coalition for Prediction Markets, joined by Coinbase, Robinhood, and Underdog. The coalition stated its aim as protecting "access to federally supervised event-based trading and to counter state-level attempts to classify the products as gambling."</div>
+    <div class="ev-source">Source [3] — Industry Leaders Form Coalition to Defend Federally Regulated Prediction Markets</div>
+  </div>
+  <div class="body">
+    <p>The public identity claim is legally coherent. The CFTC has, under the current regulatory climate, declined to restrict prediction market activity on sports events. Kalshi holds a valid Designated Contract Market license. The financial instrument framing is not fabricated — it is the genuine regulatory structure under which these platforms operate. The contradiction does not emerge from the legal argument. It emerges from what happens alongside it.</p>
+  </div>
+</div>
+
+<!-- FINDING 2 -->
+<div class="page" style="padding-bottom:0;padding-top:40px">
+  <div class="sec-rule"><span class="sec-num">Finding 02</span><div class="sec-line"></div></div>
+  <div class="sec-title">The Operational Evidence</div>
+  <p class="sec-sub">Four documented instances where Kalshi's operational decisions contradicted its public identity — each identified by third parties, not disclosed by the company.</p>
+  <div class="body">
+    <p>Between September 2024 and March 2026, the dataset identified four distinct events in which Kalshi's public positioning as a financial platform was contradicted by its own operational decisions. In each case, the contradiction was identified and reported by third parties — not disclosed voluntarily by the company.</p>
+  </div>
+  <div style="margin:28px 0">
+    <div class="tl-item">
+      <div class="tl-date">Late 2024</div>
+      <div class="tl-connector"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">Sportsbook language removed from job listing after public exposure</div>
+        <div class="tl-text">Sportico reporter Dan Bernstein identified that Kalshi's listing for a "sports operations" role originally required candidates with "extensive experience in sportsbooks." After social media users noted the language contradicted Kalshi's claim to be a financial platform, Kalshi quietly revised the posting to remove the sportsbook references without public acknowledgement.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Early 2025</div>
+      <div class="tl-connector"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">Affiliate gambling badges stripped from X after platform crackdown</div>
+        <div class="tl-text">Kalshi confirmed it stripped affiliate badges from X profiles tied to revenue-sharing arrangements promoting its event contracts, after X updated paid partnership rules targeting undisclosed gambling and sports-betting promotions. X Head of Product Nikita Bier publicly instructed one Kalshi-affiliated account: "Add a follow-up reply disclosing that this is a paid promotion for Kalshi. Otherwise, this will result in a suspension." Kalshi's affiliate program had operated under the same promotional structures used by licensed sports betting operators — the same category Kalshi publicly distinguishes itself from.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Feb 2026</div>
+      <div class="tl-connector"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">Baller League USA kit sponsorship — simultaneous sports marketing</div>
+        <div class="tl-text">Kalshi agreed to become front-of-kit sponsor for all ten teams in the inaugural season of Baller League USA, a six-a-side football league staging events in Miami. Kit sponsorship is the primary marketing tool of sports betting operators seeking brand visibility with sports audiences — the identical commercial strategy used by DraftKings, FanDuel, and Caesars across US professional sports.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Mar 2026</div>
+      <div class="tl-connector"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-line"></div></div>
+      <div class="tl-body">
+        <div class="tl-head">NBA prop markets launched during active integrity investigations</div>
+        <div class="tl-text">Kalshi announced over/under player prop markets for approximately 50 NBA players — points, rebounds, assists, three-pointers — with individual limits capped at US$10,000. The launch occurred simultaneously with widening federal investigations into NBA betting integrity. Individual-player performance props are the specific market category under active regulatory scrutiny — identical to the category that triggered federal charges against two Cleveland Guardians players in a concurrent scandal. Kalshi spokesperson Sara Slane said the product had been "designed with additional safeguards."</div>
+      </div>
+    </div>
+  </div>
+  <div class="pullquote">
+    <p>"Efforts by prediction platform Kalshi to erase references to sportsbooks from its job listings and marketing have been revealed by Sportico reporter Dan Bernstein."</p>
+    <cite>— As reported in dataset Source [4] · Sportico</cite>
+  </div>
+  <div class="body">
+    <p>Each of the four events shares a structural characteristic: the behaviour was consistent with a sports betting operator, identified by a third party, and corrected or justified after the fact. None were proactively disclosed by Kalshi. The pattern is not evidence of deliberate deception — it may reflect genuine internal tension between commercial imperatives and regulatory positioning. It is, however, a documented and recurring operational contradiction.</p>
+  </div>
+</div>
+
+<!-- FINDING 3 -->
+<div class="page" style="padding-bottom:0;padding-top:40px">
+  <div class="sec-rule"><span class="sec-num">Finding 03</span><div class="sec-line"></div></div>
+  <div class="sec-title">How the Market Treats Prediction Markets</div>
+  <p class="sec-sub">Three categories of market participant whose responses to prediction markets reveal how they are understood by those closest to the question.</p>
+  <div class="body">
+    <p>Market participants with the most direct exposure to the financial vs. gambling classification question have made their assessment through behaviour rather than public statements. That behaviour is instructive.</p>
+  </div>
+  <div class="evidence">
+    <div class="ev-label">Licensed Casino Operators — Active Avoidance</div>
+    <div class="ev-text">Major US casino operators publicly declined to enter the prediction markets sector on the grounds that association could threaten their state gambling licenses. Caesars Entertainment CEO Tom Reeg told investors: "We will not put any of our licenses at risk." MGM Resorts CEO Bill Hornbuckle said strict state oversight "has been essential to ensuring the integrity of the gaming industry." Both statements were made specifically in the context of questions about prediction markets. If licensed operators believed prediction markets were genuinely distinct from gambling, licensure risk would not be the operative concern.</div>
+    <div class="ev-source">Source [5] — Sportsbooks Warned Over Prediction Market Risks, statements as reported in Bloomberg</div>
+  </div>
+  <div class="pullquote">
+    <p>"We will not put any of our licenses at risk."</p>
+    <cite>— Tom Reeg, Chief Executive Officer, Caesars Entertainment · Investor Call, October 2025 · Source [5]</cite>
+  </div>
+  <div class="evidence">
+    <div class="ev-label">Sports Leagues — Treated as Gambling Under Existing Rules</div>
+    <div class="ev-text">The NFL and PGA Tour maintained existing bans on player endorsements of prediction market platforms, applying the same restrictions that govern licensed gambling operators. The NCAA asked the CFTC to impose a temporary suspension on college sports prediction market trading, with a spokesperson stating: "Sport integrity is paramount for the NCAA, and despite the recent CFTC memo, we remain deeply concerned by unprotected prediction markets that pose a threat to competition integrity and student-athlete safety." Leagues applied gambling-operator rules to prediction markets — not financial instrument rules.</div>
+    <div class="ev-source">Sources [6][7] — NFL and PGA Tour Maintain Ban; Kalshi Hits Record March Madness Trading Despite NCAA Pushback</div>
+  </div>
+  <div class="evidence">
+    <div class="ev-label">Banking Sector — Consumer Risk Grouped with Gambling</div>
+    <div class="ev-text">Bank of America flagged prediction markets alongside sports betting as emerging sources of consumer credit risk, noting financial strain from both categories was appearing in household debt data. Analysts described prediction market products as "a new form of speculative activity" alongside gambling, creating pressure on consumer balance sheets. The bank grouped prediction markets with gambling in its risk analysis — not with derivatives trading or commodity futures.</div>
+    <div class="ev-source">Source [8] — Bank of America Warns Gambling and Prediction Markets Adding Credit Risks</div>
+  </div>
+  <div class="evidence">
+    <div class="ev-label">New Market Entrants — Racing to Acquire CFTC Licenses</div>
+    <div class="ev-text">Participants seeking market entry moved to acquire CFTC Designated Contract Market licenses at accelerating pace. Polymarket acquired QCEX — a CFTC-licensed derivatives exchange — for US$112 million. DraftKings entered discussions to acquire Railbird Exchange, a federally licensed prediction market platform. Gemini completed a five-year CFTC licensing process. Underdog acquired a federally registered exchange structure. The race to secure CFTC licenses signals operator belief that federal preemption holds in the courts — not that the products are unambiguously financial instruments requiring no such shield.</div>
+    <div class="ev-source">Sources [9][10][11] — Polymarket Acquires QCEX; DraftKings in Talks to Acquire Railbird; Gemini Enters US Prediction Market Race</div>
+  </div>
+</div>
+
+<!-- FINDING 4 -->
+<div class="page" style="padding-bottom:0;padding-top:40px">
+  <div class="sec-rule"><span class="sec-num">Finding 04</span><div class="sec-line"></div></div>
+  <div class="sec-title">The Legal Exposure</div>
+  <p class="sec-sub">The contradiction has moved from the commercial sphere into the federal courts. Two simultaneous cases will produce the definitive classification.</p>
+  <div class="body">
+    <p>The branding contradiction is no longer merely an analytical observation. It is now the central question before two federal courts simultaneously, framed in directly opposing terms by each side.</p>
+  </div>
+  <div class="evidence">
+    <div class="ev-label">State Opposition — Amicus Brief, 36 State Attorneys General</div>
+    <div class="ev-text">Ohio Attorney General Dave Yost and 35 other State Attorneys General filed a bipartisan amicus brief opposing Kalshi in federal court. The coalition requested the US Court of Appeals for the Third Circuit to side with New Jersey in its legal dispute with Kalshi. AG Yost stated: "States rightfully have the ability to protect their citizens from the negative consequences of online gambling, no matter how it's packaged." The phrase "no matter how it's packaged" is a direct reference to the branding contradiction — the AGs are explicitly arguing that the financial instrument framing does not change the underlying product.</div>
+    <div class="ev-source">Source [12] — 36 State Attorneys General Oppose Kalshi Betting App in Federal Case</div>
+  </div>
+  <div class="pullquote">
+    <p>"States rightfully have the ability to protect their citizens from the negative consequences of online gambling, no matter how it's packaged."</p>
+    <cite>— Attorney General Dave Yost, Ohio · Amicus Brief Statement · Source [12]</cite>
+  </div>
+  <div class="evidence">
+    <div class="ev-label">Federal Legislative Response — Bipartisan Senate Bill</div>
+    <div class="ev-text">Democratic Senator Adam Schiff of California and Republican Senator John Curtis of Utah introduced legislation to amend the Commodity Exchange Act, barring any CFTC-registered entity from listing contracts tied to sporting events, athletic competitions, poker, blackjack, or similar activities. The bill's framing is significant: it proposes to resolve the contradiction not by reclassifying prediction markets as gambling, but by restricting the scope of CFTC jurisdiction — a legislative workaround that acknowledges the legal ambiguity while eliminating the commercial benefit of it.</div>
+    <div class="ev-source">Source [13] — Bipartisan Senate Bill Aims to Prohibit Sports Betting on Prediction Markets</div>
+  </div>
+  <div class="evidence">
+    <div class="ev-label">Nevada Regulatory Position — NGCB Notice 2025-77</div>
+    <div class="ev-text">The Nevada Gaming Control Board issued Notice 2025-77, formally classifying sports event contracts as wagers under Nevada gaming law and establishing that a sports pool licence is required regardless of CFTC registration. The notice creates direct exposure for any Nevada-licensed operator found to be associating with CFTC-registered prediction market platforms — which is why the licensed casino operator avoidance documented in Finding 03 is operationally rational rather than merely cautious.</div>
+    <div class="ev-source">Source [14] — NGCB Notice 2025-77, referenced across multiple dataset sources; primary source: ngcb.nv.gov</div>
+  </div>
+</div>
+
+<!-- ASSESSMENT -->
+<div class="assessment">
+  <div class="assessment-label">Intelligence Assessment</div>
+  <div class="assessment-title">What the Contradiction Actually Reveals</div>
+  <div class="assessment-body">
+    <p>The branding contradiction documented in this brief does not resolve the legal question of whether prediction markets are gambling products. That question is before the federal courts. What it does reveal is analytically more significant: <strong>Kalshi and its peers are operating under a regulatory identity that their own commercial decisions consistently undermine.</strong></p>
+    <p>This is not unique in the history of regulated industries. Daily fantasy sports operators marketed their products as games of skill exempt from UIGEA — until legislative pressure in multiple states forced operational changes. The pattern is recognisable: a commercially valuable product seeking the most favourable regulatory classification available, while product design and marketing evolve toward the uses that generate the greatest revenue.</p>
+    <p>The race to acquire CFTC Designated Contract Market licenses is the most telling indicator. If prediction markets were unambiguously financial instruments, CFTC registration would be the natural uncontested structure. Instead, operators are acquiring licenses specifically to resolve a contested classification — because the CFTC license is the legal shield against state gambling enforcement, not a reflection of the functional nature of the product.</p>
+    <p><strong>The most consequential near-term indicator is not the court rulings themselves</strong> — it is whether the CFTC maintains its current permissive posture after CME Group enters the space. CME's participation will either legitimise prediction markets as mainstream financial products or accelerate congressional intervention from legislators who cannot permit the world's largest derivatives exchange to operate a de facto national sports betting platform without congressional authorisation.</p>
+  </div>
+  <div class="verdict-grid">
+    <div class="verdict-item">
+      <div class="verdict-label">Watch — Courts</div>
+      <div class="verdict-text">Kalshi v. New York State Gaming Commission and Polymarket v. Massachusetts AG — both in federal court simultaneously. The first ruling on CFTC preemption vs. state gambling authority will be definitive for the sector.</div>
+    </div>
+    <div class="verdict-item">
+      <div class="verdict-label">Watch — CME Entry</div>
+      <div class="verdict-text">CME Group's entry via FanDuel partnership changes the political economy. Congress cannot permit the world's largest derivatives exchange to effectively run an unregulated national sports book. Timing: before end of 2026.</div>
+    </div>
+    <div class="verdict-item">
+      <div class="verdict-label">Watch — Senate Bill</div>
+      <div class="verdict-text">The Schiff-Curtis bill does not need to pass to have effect. Committee hearings will produce public testimony from Kalshi executives on the record — testimony that will be cross-examined against the operational evidence documented here.</div>
+    </div>
+  </div>
+</div>
+
+<!-- LIMITATIONS -->
+<div class="page" style="padding-bottom:0;padding-top:48px">
+  <div class="sec-rule"><span class="sec-num">Analytical Limitations</span><div class="sec-line"></div></div>
+  <div class="sec-title">What This Brief Does Not Claim</div>
+  <p class="sec-sub">Transparency on the constraints of this analysis.</p>
+  <div class="limitation"><div class="limitation-text"><strong>Dataset scope:</strong> This analysis draws from 45 articles in an independently collected open-source dataset compiled for gaming regulatory intelligence purposes — not designed specifically for prediction market analysis. Coverage gaps may exist, particularly for events reported in specialised financial or derivatives trade press not captured in the original collection.</div></div>
+  <div class="limitation"><div class="limitation-text"><strong>No proprietary data:</strong> This brief uses no non-public information, regulatory filings not yet in the public domain, or confidential sources. All quotations derive from published reporting. Where reported by a secondary outlet — Bloomberg, Sportico — the original attribution is preserved.</div></div>
+  <div class="limitation"><div class="limitation-text"><strong>No legal conclusion:</strong> This brief does not conclude that prediction markets are gambling products under any applicable legal standard. That determination is pending before federal courts. The contradiction documented here is an analytical finding about the gap between public identity and operational behaviour — it is not a legal opinion.</div></div>
+  <div class="limitation"><div class="limitation-text"><strong>Kalshi as primary subject:</strong> Kalshi is the primary subject because it is the most prominent and most legally active prediction market operator in the dataset. A comparable analysis of Polymarket's trajectory — including its $6B 2025 trading volume, QCEX acquisition, and US relaunch strategy — would constitute a separate brief.</div></div>
+</div>
+
+<!-- SOURCE INDEX -->
+<div class="page" style="padding-top:40px">
+  <div class="sec-rule"><span class="sec-num">Source Index</span><div class="sec-line"></div></div>
+  <div class="sec-title">Primary Sources</div>
+  <p class="sec-sub">All sources are publicly available. Collection period: September 2024 — March 2026. Dataset maintained by Gaming Intelligence Hub, Las Vegas.</p>
+  <div style="margin-top:20px">
+    <div class="source-item"><div class="source-num">[1]</div><div class="source-text">Kalshi sues New York regulators, claiming they overstepped authority on event contracts. Published gaming trade press, 2026. <span class="source-type">Legal</span></div></div>
+    <div class="source-item"><div class="source-num">[2]</div><div class="source-text">Polymarket Sues Massachusetts to Block State Shutdown. Published gaming trade press, 2026. <span class="source-type">Legal</span></div></div>
+    <div class="source-item"><div class="source-num">[3]</div><div class="source-text">Industry Leaders Form Coalition to Defend Federally Regulated Prediction Markets. Published gaming trade press, 2026. <span class="source-type">Industry</span></div></div>
+    <div class="source-item"><div class="source-num">[4]</div><div class="source-text">Kalshi Removes 'Sportsbook' References from Job Listing after Online Scrutiny. As reported by Sportico/Dan Bernstein. Published gaming trade press, 2025. <span class="source-type">Operational</span></div></div>
+    <div class="source-item"><div class="source-num">[5]</div><div class="source-text">Sportsbooks Warned Over Prediction Market Risks. Tom Reeg (Caesars) and Bill Hornbuckle (MGM) statements as reported in Bloomberg. Published gaming trade press, 2025. <span class="source-type">Market Response</span></div></div>
+    <div class="source-item"><div class="source-num">[6]</div><div class="source-text">NFL and PGA Tour Maintain Ban on Player Endorsements of Prediction Markets. Published gaming trade press, 2026. <span class="source-type">Market Response</span></div></div>
+    <div class="source-item"><div class="source-num">[7]</div><div class="source-text">Kalshi Hits Record March Madness Trading Despite NCAA Pushback. NCAA spokesperson statement included. Published gaming trade press, 2026. <span class="source-type">Market Response</span></div></div>
+    <div class="source-item"><div class="source-num">[8]</div><div class="source-text">Bank of America Warns Gambling and Prediction Markets Adding Credit Risks. Published gaming trade press, 2025. <span class="source-type">Financial</span></div></div>
+    <div class="source-item"><div class="source-num">[9]</div><div class="source-text">Polymarket Acquires QCEX for $112M to Launch Fully Regulated US Platform. Published gaming trade press, 2026. <span class="source-type">Corporate</span></div></div>
+    <div class="source-item"><div class="source-num">[10]</div><div class="source-text">DraftKings in Talks to Acquire Prediction Market Railbird Exchange. Published gaming trade press, 2025. <span class="source-type">Corporate</span></div></div>
+    <div class="source-item"><div class="source-num">[11]</div><div class="source-text">Gemini Enters US Prediction Market Race after Securing CFTC Approval. Tyler Winklevoss statement included. Published gaming trade press, 2025. <span class="source-type">Corporate</span></div></div>
+    <div class="source-item"><div class="source-num">[12]</div><div class="source-text">36 State Attorneys General Oppose Kalshi Betting App in Federal Case. AG Dave Yost statement included. Published gaming trade press, 2025–2026. <span class="source-type">Legal</span></div></div>
+    <div class="source-item"><div class="source-num">[13]</div><div class="source-text">Bipartisan Senate Bill Aims to Prohibit Sports Betting on Prediction Markets. Sen. Schiff (D-CA) and Sen. Curtis (R-UT). Published gaming trade press, 2026. <span class="source-type">Legislative</span></div></div>
+    <div class="source-item"><div class="source-num">[14]</div><div class="source-text">Nevada Gaming Control Board Notice 2025-77. Referenced across multiple dataset sources. Primary source: ngcb.nv.gov. <span class="source-type">Primary Regulatory</span></div></div>
+    <div class="source-item"><div class="source-num">[15]</div><div class="source-text">Kalshi Removes Affiliate Badges from X in Gambling Promotion Crackdown. Nikita Bier (X, Head of Product) statement included. Published gaming trade press, 2025. <span class="source-type">Operational</span></div></div>
+    <div class="source-item"><div class="source-num">[16]</div><div class="source-text">Kalshi Secures Lead Jersey Placement for Baller League USA Launch. Published gaming trade press, 2026. <span class="source-type">Commercial</span></div></div>
+    <div class="source-item"><div class="source-num">[17]</div><div class="source-text">Kalshi Pushes into NBA Props as Integrity Investigations Widen. Sara Slane (Kalshi spokesperson) statement included. Published gaming trade press, 2026. <span class="source-type">Operational</span></div></div>
+    <div class="source-item"><div class="source-num">[18]</div><div class="source-text">Kalshi Raises $185 Million, Reaches $2 Billion Valuation. Tarek Mansour statement. Published gaming trade press, 2025. <span class="source-type">Financial</span></div></div>
+    <div class="source-item"><div class="source-num">[19]</div><div class="source-text">CME Group Prepares Sports-Linked Contracts to Rival Kalshi and Polymarket. Published financial and gaming trade press, 2026. <span class="source-type">Market Entry</span></div></div>
+    <div class="source-item"><div class="source-num">[20]</div><div class="source-text">Monitoring increases as insider betting concerns rise in prediction markets. Unusual Whales tool documented. Published gaming trade press, 2026. <span class="source-type">Integrity</span></div></div>
+    <div class="source-item"><div class="source-num">[21]</div><div class="source-text">Kalshi's Expansion Triggers Concern Among US Geolocation Firms. GeoComply, Radar, Xpoint referenced. Published gaming trade press, 2026. <span class="source-type">Compliance</span></div></div>
+    <div class="source-item"><div class="source-num">[22]</div><div class="source-text">Nationwide Survey Indicates Wide Support for Prediction Markets. Kalshi-commissioned, Axis Research, 1,219 respondents, September 2025. <span class="source-type">Industry Research — Note: Commissioned by subject</span></div></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">Gaming Intelligence Hub — Las Vegas</div>
+  <div class="footer-right">Intelligence Brief No. 003 &nbsp;·&nbsp; April 2026<br>45 primary source articles &nbsp;·&nbsp; OSINT methodology<br>uet237.github.io/Gaming-Intelligence-Hub</div>
+  <div class="footer-disc">This brief is produced for informational and intelligence purposes from publicly available primary sources collected as part of an independently maintained gaming regulatory intelligence dataset. It does not constitute legal advice, financial advice, or regulatory guidance. All quotations are reproduced from published source reporting. Regulatory and legal environments change rapidly — verify current status with qualified counsel before making operational decisions. The analyst has no financial interest in any entity discussed in this brief. © 2026 Gaming Intelligence Hub, Las Vegas. Licensed under Creative Commons Attribution 4.0 — share with attribution.</div>
+</footer>
+
+</body>
+</html>
